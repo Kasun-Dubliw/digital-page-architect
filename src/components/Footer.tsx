@@ -5,7 +5,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">TechCorp</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Dubli<span className="text-red-600">W</span>
+            </h3>
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner for innovative IT solutions. 
               We help businesses thrive in the digital age.
@@ -25,7 +27,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: info@techcorp.com</p>
+              <p>Email: info@dubliw.com</p>
               <p>Phone: (555) 123-4567</p>
               <p>Address: 123 Tech Street<br />Digital City, DC 12345</p>
             </div>
@@ -33,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 TechCorp. All rights reserved.</p>
+          <p>&copy; 2024 DubliW. All rights reserved.</p>
         </div>
       </div>
     </footer>
