@@ -12,33 +12,24 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform Development",
-      summary: "Built a scalable e-commerce platform serving 100,000+ users with real-time inventory management and secure payment processing.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop"
+      title: "Systemate - Systemate LLC (USA)",
+      summary: "Systemate is a software platform designed for real estate investors targeting the U.S. market. We are helping the client revamp the existing platform to handle 100s of gigabytes of data in a more scalable yet cost-effective manner. We designed the new system based on microservices concepts and hosted it in the Azure cloud. Systemate includes .NET and Python backends, an Angular frontend, and Android/iOS mobile applications. Currently, we are redesigning and implementing legacy components while migrating the entire platform to AWS.",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      highlights: ["100s of gigabytes of data", "microservices concepts", "Azure cloud", ".NET and Python backends", "Angular frontend", "Android/iOS mobile applications"]
     },
     {
       id: 2,
-      title: "Enterprise Software Solution",
-      summary: "Developed a comprehensive enterprise management system that increased operational efficiency by 40% for a Fortune 500 company.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
+      title: "fACT - University of Auckland (New Zealand)",
+      summary: "fACT is software designed to be used in treating patients with mental health conditions. We are working with the client to build the platform from the ground up, starting from architectural design to implementation. The biggest challenge is data security, as the system will handle patients' health data. fACT includes a .NET backend and Android/iOS applications for both tablets and mobile phones.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      highlights: ["mental health conditions", "ground up development", "data security", "patients' health data", ".NET backend", "Android/iOS applications"]
     },
     {
       id: 3,
-      title: "Mobile App Development",
-      summary: "Created a cross-platform mobile application with 500,000+ downloads and 4.8-star rating on app stores.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop"
-    },
-    {
-      id: 4,
-      title: "Cloud Migration Project",
-      summary: "Successfully migrated legacy systems to cloud infrastructure, reducing costs by 35% and improving performance by 60%.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
-    },
-    {
-      id: 5,
-      title: "Digital Transformation Initiative",
-      summary: "Led complete digital transformation for manufacturing company, implementing IoT solutions and real-time analytics dashboard.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"
+      title: "TeaBase - BPH 200 Pte Ltd (Singapore)",
+      summary: "TeaBase is a SaaS application for the tea industry, designed for market price forecasting and providing the required analytics for business operators to make data-driven decisions. We helped the team by analyzing their business requirements, reviewing the software architecture they designed, and proposing an improved architecture that includes ETL pipelines capable of handling large amounts of data while incorporating necessary security controls in a cost-effective manner. The system was designed using AWS-managed components.",
+      image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=400&fit=crop",
+      highlights: ["tea industry SaaS", "market price forecasting", "data-driven decisions", "ETL pipelines", "large amounts of data", "AWS-managed components"]
     }
   ];
 
@@ -46,7 +37,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Portfolio</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">A Few projects....</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             Explore our success stories and the innovative solutions we've delivered for clients across various industries.
           </p>
@@ -54,7 +45,7 @@ const Portfolio = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent className="-ml-4">
               {projects.map((project) => (
-                <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/2">
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                     <div className="aspect-video w-full overflow-hidden rounded-t-lg">
                       <img 
@@ -64,14 +55,24 @@ const Portfolio = () => {
                       />
                     </div>
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-xl font-semibold text-gray-900 line-clamp-2">
+                      <CardTitle className="text-xl font-semibold text-gray-900 leading-tight">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0">
-                      <CardDescription className="text-gray-600 leading-relaxed">
+                    <CardContent className="pt-0 space-y-4">
+                      <CardDescription className="text-gray-600 leading-relaxed text-sm">
                         {project.summary}
                       </CardDescription>
+                      <div className="flex flex-wrap gap-2">
+                        {project.highlights.map((highlight, index) => (
+                          <span 
+                            key={index}
+                            className="px-2 py-1 bg-red-50 text-red-600 text-xs rounded-full font-medium"
+                          >
+                            {highlight}
+                          </span>
+                        ))}
+                      </div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
