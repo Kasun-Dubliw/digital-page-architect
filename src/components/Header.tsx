@@ -17,8 +17,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">
-            TechCorp
+          <div className="text-2xl font-bold text-gray-900">
+            Dubli<span className="text-red-600">W</span>
           </div>
           
           {/* Desktop Navigation */}
