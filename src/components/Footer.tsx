@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -26,9 +27,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: info@dubliw.com</p>
-              <p>Phone: (555) 123-4567</p>
-              <p>Address: 123 Tech Street<br />Digital City, DC 12345</p>
+              <p>Email: hello@dubliw.com</p>
+              <p>Phone: +94 77 9821079</p>
+              <p>Address: 68/3, Sandun Uyana<br />Hedigama, Piliyandala<br />Sri Lanka</p>
             </div>
           </div>
         </div>
