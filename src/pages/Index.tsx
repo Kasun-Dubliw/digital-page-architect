@@ -6,17 +6,21 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <Portfolio />
-      <ContactUs />
-      <Footer />
+    <div className="min-h-screen relative">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <Header />
+        <Hero />
+        <AboutUs />
+        <Services />
+        <Portfolio />
+        <ContactUs />
+        <Footer />
+      </div>
     </div>
   );
 };
