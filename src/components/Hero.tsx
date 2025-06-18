@@ -1,162 +1,148 @@
 
+import { ArrowRight, Play, Shield, Zap, Globe } from 'lucide-react';
+
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 pb-16 bg-white min-h-screen flex items-center">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-          {/* Left Side - Content */}
-          <div className="order-2 lg:order-1 space-y-8">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-gradient-xy"></div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/30 to-pink-500/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-r from-green-400/40 to-emerald-500/40 rounded-full blur-2xl animate-pulse"></div>
+        
+        {/* Grid overlay */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
+              Next-Gen Software Solutions
+            </div>
+
+            {/* Main Heading */}
             <div className="space-y-6">
-              <div className="inline-block">
-                <p className="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-3 bg-blue-50 px-4 py-2 rounded-full">
-                  WE ARE DUBLIW
-                </p>
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Innovative
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent">
+                  Build
+                </span>
                 <br />
-                <span className="text-blue-600">IT Solutions</span>
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                  Tomorrow
+                </span>
                 <br />
-                <span className="text-gray-700 text-4xl md:text-5xl lg:text-6xl">for Your Business</span>
+                <span className="text-white/90 text-4xl md:text-5xl lg:text-6xl">
+                  Today
+                </span>
               </h1>
-              <p className="text-gray-600 text-xl leading-relaxed max-w-2xl">
-                We deliver cutting-edge technology solutions that drive growth, 
-                enhance efficiency, and transform your business for the digital future. 
-                Our expertise spans across multiple domains with a focus on scalable, 
-                secure, and cost-effective solutions.
+              
+              <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-2xl">
+                Transform your vision into reality with cutting-edge AI-powered solutions, 
+                cloud-native architectures, and scalable systems that adapt to tomorrow's challenges.
               </p>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <button className="bg-blue-600 text-white px-10 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Get Started
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 pt-8">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                <span className="flex items-center justify-center gap-3">
+                  Start Building
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 font-semibold text-lg">
-                Learn More
+              
+              <button className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300">
+                <Play className="w-5 h-5" />
+                Watch Demo
               </button>
             </div>
 
-            {/* Stats or Features */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-100">
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">10+</div>
-                <div className="text-gray-600 text-sm font-medium">Years Experience</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">500+</div>
+                <div className="text-white/60 text-sm font-medium mt-1">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">50+</div>
-                <div className="text-gray-600 text-sm font-medium">Projects Completed</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">99.9%</div>
+                <div className="text-white/60 text-sm font-medium mt-1">Uptime SLA</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">100%</div>
-                <div className="text-gray-600 text-sm font-medium">Client Satisfaction</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">24/7</div>
+                <div className="text-white/60 text-sm font-medium mt-1">Support</div>
               </div>
             </div>
           </div>
-          
-          {/* Right Side - Enhanced Illustration */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-2xl">
-              {/* Main Illustration Container */}
-              <div className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-12 shadow-2xl">
-                <div className="aspect-square w-full flex items-center justify-center">
-                  {/* Enhanced Developer Working Illustration */}
-                  <div className="relative w-96 h-96">
-                    {/* Desk - More realistic perspective */}
-                    <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-72 h-40 bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 rounded-2xl shadow-2xl" 
-                         style={{ 
-                           transform: 'translateX(-50%) perspective(600px) rotateX(35deg) rotateY(-5deg)',
-                           boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
-                         }}>
-                      {/* Desk legs */}
-                      <div className="absolute -bottom-6 left-8 w-3 h-12 bg-amber-600 rounded-lg"></div>
-                      <div className="absolute -bottom-6 right-8 w-3 h-12 bg-amber-600 rounded-lg"></div>
-                    </div>
-                    
-                    {/* Multiple Monitors Setup */}
-                    <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2">
-                      {/* Main Monitor */}
-                      <div className="relative transform translate-x-4">
-                        <div className="w-40 h-28 bg-gray-900 rounded-xl shadow-2xl border-4 border-gray-800">
-                          <div className="w-full h-full bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg p-3">
-                            <div className="grid grid-cols-4 gap-1 h-full">
-                              <div className="bg-white/40 rounded-md"></div>
-                              <div className="bg-white/30 rounded-md"></div>
-                              <div className="bg-white/40 rounded-md"></div>
-                              <div className="bg-white/20 rounded-md"></div>
-                              <div className="bg-white/60 rounded-md col-span-3"></div>
-                              <div className="bg-white/30 rounded-md"></div>
-                              <div className="bg-white/40 rounded-md col-span-2"></div>
-                              <div className="bg-white/50 rounded-md col-span-2"></div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* Monitor Stand */}
-                        <div className="w-12 h-8 bg-gray-700 mx-auto rounded-b-xl"></div>
-                        <div className="w-20 h-3 bg-gray-800 mx-auto rounded-lg"></div>
-                      </div>
-                      
-                      {/* Secondary Monitor */}
-                      <div className="absolute -left-16 top-2 transform -rotate-12">
-                        <div className="w-24 h-16 bg-gray-900 rounded-lg shadow-xl border-2 border-gray-800">
-                          <div className="w-full h-full bg-gradient-to-br from-green-400 to-green-500 rounded-md p-2">
-                            <div className="grid grid-cols-2 gap-1 h-full">
-                              <div className="bg-white/40 rounded"></div>
-                              <div className="bg-white/60 rounded"></div>
-                              <div className="bg-white/30 rounded col-span-2"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Enhanced Person */}
-                    <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 -translate-x-12">
-                      {/* Head with details */}
-                      <div className="relative w-10 h-10 bg-gradient-to-r from-orange-200 to-orange-300 rounded-full mx-auto mb-2 shadow-lg">
-                        {/* Hair */}
-                        <div className="absolute -top-1 -left-1 w-12 h-8 bg-amber-800 rounded-full"></div>
-                        {/* Eyes */}
-                        <div className="absolute top-3 left-2 w-1 h-1 bg-gray-800 rounded-full"></div>
-                        <div className="absolute top-3 right-2 w-1 h-1 bg-gray-800 rounded-full"></div>
-                      </div>
-                      {/* Body */}
-                      <div className="w-16 h-20 bg-gradient-to-b from-blue-500 to-blue-600 rounded-xl mx-auto shadow-lg"></div>
-                      {/* Arms with typing position */}
-                      <div className="absolute top-12 -left-3 w-8 h-3 bg-orange-200 rounded-full transform rotate-45 shadow-md"></div>
-                      <div className="absolute top-12 -right-3 w-8 h-3 bg-orange-200 rounded-full transform -rotate-45 shadow-md"></div>
-                      {/* Keyboard */}
-                      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-12 h-3 bg-gray-800 rounded-md"></div>
-                    </div>
-                    
-                    {/* Enhanced Decorative Elements */}
-                    <div className="absolute top-12 right-12 w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl opacity-90 shadow-xl transform rotate-12 animate-float"></div>
-                    <div className="absolute top-20 left-12 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full opacity-80 shadow-lg animate-float-delayed"></div>
-                    <div className="absolute bottom-12 right-16 w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl opacity-85 shadow-md transform -rotate-12"></div>
-                    
-                    {/* Office Plant */}
-                    <div className="absolute bottom-32 right-20">
-                      <div className="w-4 h-12 bg-gradient-to-t from-green-600 to-green-500 rounded-full shadow-md"></div>
-                      <div className="absolute -top-2 -left-2 w-3 h-6 bg-green-400 rounded-full transform rotate-45"></div>
-                      <div className="absolute -top-2 -right-2 w-3 h-6 bg-green-400 rounded-full transform -rotate-45"></div>
-                      <div className="absolute -top-1 -left-1 w-2 h-4 bg-green-500 rounded-full transform rotate-90"></div>
-                      <div className="w-8 h-4 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg mx-auto shadow-md"></div>
-                    </div>
 
-                    {/* Code Symbols Floating */}
-                    <div className="absolute top-16 left-16 text-blue-500 text-xl font-mono opacity-60 animate-pulse">&lt;/&gt;</div>
-                    <div className="absolute top-24 right-24 text-green-500 text-lg font-mono opacity-60 animate-pulse">{ }</div>
-                    <div className="absolute bottom-16 left-20 text-purple-500 text-lg font-mono opacity-60 animate-pulse">( )</div>
+          {/* Right Side - Futuristic Visualization */}
+          <div className="relative">
+            <div className="relative w-full h-[600px] flex items-center justify-center">
+              {/* Central Hub */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-48 h-48 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full backdrop-blur-xl border border-white/20 flex items-center justify-center animate-pulse-glow">
+                  <div className="w-32 h-32 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full backdrop-blur-xl border border-white/30 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                      <Zap className="w-8 h-8 text-white animate-pulse" />
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Enhanced Floating Elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl animate-float opacity-70 shadow-lg"></div>
-              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full animate-float-delayed opacity-70 shadow-lg"></div>
-              <div className="absolute top-1/2 -left-12 w-6 h-6 bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-xl animate-pulse opacity-50 shadow-md"></div>
-              <div className="absolute top-1/4 -right-8 w-4 h-4 bg-gradient-to-br from-green-200 to-green-300 rounded-full animate-float opacity-60"></div>
+
+              {/* Orbiting Elements */}
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+                <div className="relative w-full h-full">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-emerald-400/40 to-green-500/40 rounded-2xl backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                    <Shield className="w-8 h-8 text-emerald-300" />
+                  </div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-purple-400/40 to-pink-500/40 rounded-2xl backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                    <Globe className="w-8 h-8 text-purple-300" />
+                  </div>
+                  <div className="absolute top-1/2 left-0 -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-cyan-400/40 to-blue-500/40 rounded-2xl backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-cyan-300 rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="absolute top-1/2 right-0 -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-orange-400/40 to-red-500/40 rounded-2xl backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-orange-300 rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connection Lines */}
+              <div className="absolute inset-0">
+                <svg className="w-full h-full" viewBox="0 0 400 400">
+                  <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="rgba(59, 130, 246, 0.3)" />
+                      <stop offset="50%" stopColor="rgba(147, 51, 234, 0.5)" />
+                      <stop offset="100%" stopColor="rgba(236, 72, 153, 0.3)" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="200" cy="200" r="120" fill="none" stroke="url(#lineGradient)" strokeWidth="1" opacity="0.6" />
+                  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#lineGradient)" strokeWidth="1" opacity="0.4" />
+                  <circle cx="200" cy="200" r="200" fill="none" stroke="url(#lineGradient)" strokeWidth="1" opacity="0.2" />
+                </svg>
+              </div>
+
+              {/* Floating Data Points */}
+              <div className="absolute top-20 right-20 w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-20 left-20 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-40 left-10 w-1 h-1 bg-emerald-400 rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

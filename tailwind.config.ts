@@ -120,10 +120,18 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'
+						boxShadow: '0 0 20px rgba(6, 182, 212, 0.4), 0 0 40px rgba(6, 182, 212, 0.2)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)'
+						boxShadow: '0 0 40px rgba(6, 182, 212, 0.6), 0 0 80px rgba(6, 182, 212, 0.3)'
+					}
+				},
+				'spin': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
 					}
 				}
 			},
@@ -133,7 +141,11 @@ export default {
 				'gradient-xy': 'gradient-xy 15s ease infinite',
 				'float': 'float 8s ease-in-out infinite',
 				'float-delayed': 'float-delayed 10s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'spin': 'spin 1s linear infinite'
+			},
+			backgroundImage: {
+				'grid-white': 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)'
 			}
 		}
 	},
