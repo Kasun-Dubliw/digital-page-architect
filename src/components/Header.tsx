@@ -17,14 +17,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">W</span>
-            </div>
-            <div className="text-2xl font-bold">
-              <span className="text-gray-900">Dubli</span>
-              <span className="text-blue-600">W</span>
+          {/* Simple Logo matching the uploaded image */}
+          <div className="flex items-center space-x-2">
+            <div className="text-3xl font-bold text-gray-800">
+              <span className="bg-gray-800 text-white px-2 py-1 rounded">W</span>
+              <span className="ml-2">Dubliw</span>
             </div>
           </div>
           
@@ -61,7 +58,7 @@ const Header = () => {
               Contact Us
             </button>
             
-            {/* Enhanced Call Us Button */}
+            {/* Call Us Button */}
             <div className="flex items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <Phone className="w-5 h-5 mr-3" />
               <div className="flex flex-col">
@@ -80,7 +77,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Enhanced Mobile Navigation */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-2 pt-4">
