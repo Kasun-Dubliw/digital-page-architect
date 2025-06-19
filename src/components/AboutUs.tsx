@@ -1,4 +1,3 @@
-
 import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
@@ -21,45 +20,51 @@ const AboutUs = () => {
   const techStacks = [
     {
       category: "AI & ML",
-      icon: <Sparkles className="w-8 h-8 text-purple-400" />,
+      icon: <Sparkles className="w-6 h-6" />,
       technologies: ["TensorFlow", "PyTorch", "OpenAI", "LangChain"],
-      color: "bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30",
-      gradient: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/30"
     },
     {
       category: "Backend", 
-      icon: <Server className="w-8 h-8 text-cyan-400" />,
+      icon: <Server className="w-6 h-6" />,
       technologies: ["Node.js", "Python", "Rust", "Go"],
-      color: "bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-cyan-500/30",
-      gradient: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "bg-cyan-500/10",
+      borderColor: "border-cyan-500/30"
     },
     {
       category: "Mobile", 
-      icon: <Smartphone className="w-8 h-8 text-emerald-400" />,
+      icon: <Smartphone className="w-6 h-6" />,
       technologies: ["Flutter", "React Native", "Swift", "Kotlin"],
-      color: "bg-gradient-to-br from-emerald-900/20 to-green-900/20 border-emerald-500/30",
-      gradient: "from-emerald-500 to-green-500"
+      color: "from-emerald-500 to-green-500",
+      bgColor: "bg-emerald-500/10",
+      borderColor: "border-emerald-500/30"
     },
     {
       category: "Cloud",
-      icon: <Cloud className="w-8 h-8 text-indigo-400" />,
+      icon: <Cloud className="w-6 h-6" />,
       technologies: ["AWS", "Azure", "GCP", "Kubernetes"],
-      color: "bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border-indigo-500/30",
-      gradient: "from-indigo-500 to-purple-500"
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "bg-indigo-500/10",
+      borderColor: "border-indigo-500/30"
     },
     {
       category: "Frontend",
-      icon: <Monitor className="w-8 h-8 text-orange-400" />,
+      icon: <Monitor className="w-6 h-6" />,
       technologies: ["React", "Next.js", "Vue", "Svelte"],
-      color: "bg-gradient-to-br from-orange-900/20 to-red-900/20 border-orange-500/30",
-      gradient: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/30"
     },
     {
       category: "Blockchain",
-      icon: <Shield className="w-8 h-8 text-yellow-400" />,
+      icon: <Shield className="w-6 h-6" />,
       technologies: ["Ethereum", "Solana", "Web3.js", "IPFS"],
-      color: "bg-gradient-to-br from-yellow-900/20 to-amber-900/20 border-yellow-500/30",
-      gradient: "from-yellow-500 to-amber-500"
+      color: "from-yellow-500 to-amber-500",
+      bgColor: "bg-yellow-500/10",
+      borderColor: "border-yellow-500/30"
     }
   ];
 
@@ -176,41 +181,100 @@ const AboutUs = () => {
             </div>
           </div>
 
-          {/* Tech Stacks Section */}
+          {/* Redesigned Tech Arsenal Section */}
           <div>
-            <h3 className="text-4xl font-bold text-center mb-12">
-              <span className="text-white">Our </span>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Tech Arsenal</span>
-            </h3>
+            <div className="text-center mb-12">
+              <h3 className="text-4xl font-bold mb-4">
+                <span className="text-white">Our </span>
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Tech Arsenal</span>
+              </h3>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                Cutting-edge technologies and frameworks that power our innovative solutions
+              </p>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {techStacks.map((stack, index) => (
-                <Card key={index} className={`${stack.color} backdrop-blur-xl border-2 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group overflow-hidden`}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <CardHeader className="text-center pb-4 relative z-10">
-                    <div className={`flex justify-center mb-4 p-4 bg-gradient-to-r ${stack.gradient} rounded-2xl w-20 h-20 mx-auto items-center shadow-lg group-hover:shadow-2xl transition-shadow duration-300`}>
-                      <div className="text-white group-hover:scale-110 transition-transform duration-300">
-                        {stack.icon}
+            {/* Horizontal Scrolling Layout for Mobile, Grid for Desktop */}
+            <div className="relative">
+              {/* Desktop Grid Layout */}
+              <div className="hidden lg:grid lg:grid-cols-3 gap-6">
+                {techStacks.map((stack, index) => (
+                  <div key={index} className="group relative">
+                    <div className={`absolute inset-0 -m-1 bg-gradient-to-r ${stack.color} rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                    <div className={`relative ${stack.bgColor} backdrop-blur-xl border ${stack.borderColor} rounded-2xl p-6 h-full hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1`}>
+                      
+                      {/* Icon and Category */}
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className={`w-12 h-12 bg-gradient-to-r ${stack.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                          {stack.icon}
+                        </div>
+                        <h4 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                          {stack.category}
+                        </h4>
+                      </div>
+                      
+                      {/* Technologies Grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {stack.technologies.map((tech, techIndex) => (
+                          <div 
+                            key={techIndex}
+                            className="bg-white/5 backdrop-blur-md rounded-lg p-3 text-center border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
+                          >
+                            <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
+                              {tech}
+                            </span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
-                      {stack.category}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {stack.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="px-3 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium text-white/90 shadow-md hover:shadow-lg transition-all duration-300 border border-white/20 hover:border-white/40 hover:bg-white/20 hover:scale-105"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Horizontal Scroll Layout */}
+              <div className="lg:hidden overflow-x-auto pb-6">
+                <div className="flex gap-4 w-max">
+                  {techStacks.map((stack, index) => (
+                    <div key={index} className="group relative w-72 flex-shrink-0">
+                      <div className={`absolute inset-0 -m-1 bg-gradient-to-r ${stack.color} rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                      <div className={`relative ${stack.bgColor} backdrop-blur-xl border ${stack.borderColor} rounded-2xl p-6 h-full hover:border-white/30 transition-all duration-300`}>
+                        
+                        {/* Icon and Category */}
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className={`w-12 h-12 bg-gradient-to-r ${stack.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                            {stack.icon}
+                          </div>
+                          <h4 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                            {stack.category}
+                          </h4>
+                        </div>
+                        
+                        {/* Technologies Grid */}
+                        <div className="grid grid-cols-2 gap-3">
+                          {stack.technologies.map((tech, techIndex) => (
+                            <div 
+                              key={techIndex}
+                              className="bg-white/5 backdrop-blur-md rounded-lg p-3 text-center border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
+                            >
+                              <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
+                                {tech}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  ))}
+                </div>
+              </div>
+
+              {/* Scroll Indicator for Mobile */}
+              <div className="lg:hidden flex justify-center mt-4">
+                <div className="flex gap-2">
+                  {Array.from({ length: Math.ceil(techStacks.length / 2) }).map((_, index) => (
+                    <div key={index} className="w-2 h-2 bg-white/20 rounded-full"></div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
