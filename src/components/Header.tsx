@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Phone, Zap } from 'lucide-react';
 
@@ -69,15 +68,12 @@ const Header = () => {
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
             </button>
             
-            {/* Futuristic Call Button */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-              <div className="relative flex items-center bg-slate-800 text-white px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20">
-                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-medium opacity-90">Call Us</span>
-                  <span className="text-sm font-semibold">+94 77 9821079</span>
-                </div>
+            {/* Clean Call Button */}
+            <div className="flex items-center bg-slate-800 text-white px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 hover:bg-slate-700">
+              <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+              <div className="flex flex-col">
+                <span className="text-xs font-medium opacity-90">Call Us</span>
+                <span className="text-sm font-semibold">+94 77 9821079</span>
               </div>
             </div>
           </div>
