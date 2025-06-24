@@ -14,10 +14,10 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Systemate",
-      subtitle: "AI Real Estate Platform",
-      description: "Revolutionary real estate intelligence platform with advanced machine learning analytics and predictive market modeling.",
+      subtitle: "Systemate LLC (USA)",
+      description: "Systemate is a software platform designed for real estate investors targeting the U.S. market. We are helping the client revamp the existing platform to handle 100s of gigabytes of data in a more scalable yet cost-effective manner. We designed the new system based on microservices concepts and hosted it in the Azure cloud. Systemate includes .NET and Python backends, an Angular frontend, and Android/iOS mobile applications.",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-      technologies: ["AI Analytics", "Azure Cloud", "Neural Networks"],
+      technologies: [".Net FrameWork", ".Net Core", "MS SQL", "Angular", "Azure Cloud", "AWS"],
       category: "Real Estate Intelligence",
       status: "Live",
       statusColor: "emerald",
@@ -27,28 +27,28 @@ const Portfolio = () => {
     {
       id: 2,
       title: "fACT",
-      subtitle: "Neural Health Platform",
-      description: "Next-generation mental health treatment platform featuring AI-driven diagnostics and blockchain-secured patient data.",
+      subtitle: "University of Auckland (New Zealand)",
+      description: "fACT is software designed to b e used in treating patients with mental health conditions . W e are working with the client to build the platform from the ground up, starting from architectural design t o implementation. The biggest challenge is data security, as the system will handle patients' health data. fACT includes a .NET backend and Android/iOS applications for both tablets and mobile phones.",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-      technologies: ["AI Diagnostics", "Blockchain", "Biometric Auth"],
+      technologies: [".Net Core", "Posgress SQL", "Android", "iOS", "AWS"],
       category: "Healthcare Innovation",
       status: "Development",
       statusColor: "yellow",
-      progress: 60,
+      progress: 85,
       year: "2024"
     },
     {
       id: 3,
       title: "TeaBase",
-      subtitle: "Quantum Market Analytics",
-      description: "Revolutionary SaaS platform for agricultural market prediction using quantum computing algorithms and satellite data.",
+      subtitle: "BPH 200 Pte Ltd (Singapore)",
+      description: "TeaBase is a SaaS application for the tea industry, designed for market price forecasting and providing the required analytics for business operators to make data-driven decisions. W e helped the team b y analyzing their business requirements, reviewing the software architecture they designed, and proposing an improved architecture that includes ETL pipelines capable of handling large amounts of data while incorporating necessary security controls i n a cost-effective manner. The system was designed using AWS-managed components.",
       image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=400&fit=crop",
-      technologies: ["Quantum Computing", "Satellite Data", "AI Forecasting"],
+      technologies: ["Python", "AWS", "Machine Learning", "Data Analytics", "ETL"],
       category: "Agricultural Intelligence",
       status: "Scaling",
       statusColor: "cyan",
-      progress: 85,
-      year: "2024"
+      progress: 100,
+      year: "2022"
     }
   ];
 
@@ -79,7 +79,7 @@ const Portfolio = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Future <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+              A Few <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
             </h2>
             
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
@@ -121,7 +121,8 @@ const Portfolio = () => {
                   </div>
 
                   <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between gap-3">
+                    <div
+                      className="flex items-start justify-between gap-3">
                       <div className="flex-1">
                         <CardTitle className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-1">
                           {project.title}
@@ -134,21 +135,21 @@ const Portfolio = () => {
                         <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-cyan-400 hover:bg-white/20 transition-all">
                           <ExternalLink className="w-3 h-3" />
                         </button>
-                        <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-purple-400 hover:bg-white/20 transition-all">
+                        {/* <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-purple-400 hover:bg-white/20 transition-all">
                           <Github className="w-3 h-3" />
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </CardHeader>
                   
-                  <CardContent className="pt-0 space-y-4">
+                  <CardContent className="pt-0 space-y-4" >
                     <CardDescription className="text-white/60 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
                       {project.description}
                     </CardDescription>
                     
                     {/* Key Technologies */}
                     <div className="flex flex-wrap gap-1.5">
-                      {project.technologies.slice(0, 3).map((tech, index) => (
+                      {project.technologies.map((tech, index) => (
                         <span 
                           key={index}
                           className="px-2 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-xs rounded-md font-medium hover:bg-white/20 transition-all"
@@ -176,10 +177,10 @@ const Portfolio = () => {
                     </div>
 
                     {/* Learn More Link */}
-                    <div className="flex items-center text-sm text-cyan-400 group-hover:text-cyan-300 transition-colors cursor-pointer pt-2">
+                    {/* <div className="flex items-center text-sm text-cyan-400 group-hover:text-cyan-300 transition-colors cursor-pointer pt-2">
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               </div>
@@ -187,7 +188,7 @@ const Portfolio = () => {
           </div>
           
           {/* Enhanced Call to Action */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
               <button className="group relative px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
                 <span className="flex items-center justify-center gap-2">
@@ -200,7 +201,7 @@ const Portfolio = () => {
                 Start Your Project
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

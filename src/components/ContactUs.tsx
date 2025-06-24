@@ -163,29 +163,6 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-
-          {/* Additional Contact Methods */}
-          <div className="mt-12 text-center">
-            <p className="text-white/60 text-sm mb-4">
-              Prefer other ways to connect?
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="mailto:hello@dubliw.com" 
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white/80 hover:text-white rounded-lg transition-all text-sm"
-              >
-                <Mail className="w-4 h-4" />
-                Email Us
-              </a>
-              <a 
-                href="tel:+94779821079" 
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white/80 hover:text-white rounded-lg transition-all text-sm"
-              >
-                <Phone className="w-4 h-4" />
-                Call Us
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

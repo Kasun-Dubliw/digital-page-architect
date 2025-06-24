@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
                 
                 <p className="text-white/80 leading-relaxed mb-4">
-                  Your trusted partner for innovative IT solutions powered by AI and revolutionary software architecture.
+                  Your Trusted Partner for Innovative IT Solutions and Modern Software Architecture — Designed for a Remote-First World.
                 </p>
                 
                 <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
@@ -120,7 +120,7 @@ const Footer = () => {
             
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
               <div className="text-white/60 text-sm">
-                &copy; 2024 DubliW. All rights reserved.
+                &copy; 2025 DubliW. All rights reserved.
               </div>
               
               <div className="flex items-center gap-2 text-white/50 text-sm">

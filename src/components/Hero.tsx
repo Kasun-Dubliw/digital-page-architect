@@ -1,7 +1,18 @@
 
 import { ArrowRight, Play, Shield, Zap, Globe } from 'lucide-react';
+import { useState } from 'react';
 
 const Hero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -44,14 +55,13 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-2xl">
-                Transform your vision into reality with cutting-edge AI-powered solutions, 
-                cloud-native architectures, and scalable systems that adapt to tomorrow's challenges.
+                We help you turn your vision into reality with innovative IT solutions, cloud-native architectures, and scalable systems designed to adapt and grow with your business.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <button onClick={() => scrollToSection('contact')} className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                 <span className="flex items-center justify-center gap-3">
                   Start Building
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -59,16 +69,16 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
               </button>
               
-              <button className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300">
+              <button  onClick={() => scrollToSection('portfolio')} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300">
                 <Play className="w-5 h-5" />
-                Watch Demo
+                Our Projects
               </button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">500+</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">3+</div>
                 <div className="text-white/60 text-sm font-medium mt-1">Projects Delivered</div>
               </div>
               <div className="text-center">

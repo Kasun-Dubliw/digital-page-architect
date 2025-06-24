@@ -3,65 +3,100 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 
 const AboutUs = () => {
   const expertise = [
-    "AI-powered cloud solutions with quantum-level optimization",
-    "Microservices architecture with self-healing capabilities", 
-    "Real-time data pipelines processing billions of events",
-    "Zero-trust security with blockchain integration"
+    "Cloud-based applications with cost-effectiveness in mind",
+    "Scalable software platforms utilizing microservices architecture", 
+    "Data pipelines to handle massive ammounts of data",
+    "Data security and platform security with zero-trust architecture"
   ];
 
   const domains = [
-    "FinTech & DeFi",
-    "HealthTech & Biotech", 
+    "Finance",
+    "HealthCare", 
     "Smart Travel & Mobility",
-    "EdTech & VR Learning",
-    "PropTech & Smart Cities"
+    "Educataion & E-Learning",
+    "Real State",
   ];
 
   const techStacks = [
     {
+      name: "AI & ML",
       category: "AI & ML",
       icon: <Sparkles className="w-6 h-6" />,
-      technologies: ["TensorFlow", "PyTorch", "OpenAI", "LangChain"],
+      technologies: [
+        { name: "TensorFlow", imageUrl: "/icons/tensorflow.svg" },
+        { name: "PyTorch", imageUrl: "/icons/pytorch.svg" }
+      ],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/30"
     },
     {
+      name: "Backend",
       category: "Backend", 
       icon: <Server className="w-6 h-6" />,
-      technologies: ["Node.js", "Python", "Rust", "Go"],
+      technologies: [
+        { name: ".Net", imageUrl: "/icons/dotnet.svg" },
+        { name: "Python", imageUrl: "/icons/python.svg" },
+        { name: "Node.js", imageUrl: "/icons/nodejs.svg" },
+        { name: "Java", imageUrl: "/icons/java.svg" }
+      ],
       color: "from-cyan-500 to-blue-500",
       bgColor: "bg-cyan-500/10",
-      borderColor: "border-cyan-500/30"
+      borderColor: "border-cyan-500/30",
     },
     {
+      name: "Mobile",
       category: "Mobile", 
       icon: <Smartphone className="w-6 h-6" />,
-      technologies: ["Flutter", "React Native", "Swift", "Kotlin"],
+      technologies: [
+        { name: "Android", imageUrl: "/icons/android.svg" },
+        { name: "Flutter", imageUrl: "/icons/flutter.svg" },
+        { name: "React Native", imageUrl: "/icons/react.svg" },
+        { name: "IOS", imageUrl: "/icons/apple.svg" }
+      ],
       color: "from-emerald-500 to-green-500",
       bgColor: "bg-emerald-500/10",
       borderColor: "border-emerald-500/30"
     },
     {
-      category: "Cloud",
+      name: "Cloud & DevOps",
+      category: "Cloud & DevOps",
       icon: <Cloud className="w-6 h-6" />,
-      technologies: ["AWS", "Azure", "GCP", "Kubernetes"],
+      technologies: [
+        { name: "AWS", imageUrl: "/icons/aws.svg" },
+        { name: "Azure", imageUrl: "/icons/azure.svg" },
+        { name: "GitHub Workflows", imageUrl: "/icons/github.svg" }
+      ],
       color: "from-indigo-500 to-purple-500",
       bgColor: "bg-indigo-500/10",
       borderColor: "border-indigo-500/30"
     },
     {
+      name: "Frontend",
       category: "Frontend",
       icon: <Monitor className="w-6 h-6" />,
-      technologies: ["React", "Next.js", "Vue", "Svelte"],
+      technologies: [
+        { name: "Angular", imageUrl: "/icons/angular.svg" },
+        { name: "PrimeNG", imageUrl: "/icons/primeng.svg" },
+        { name: "React", imageUrl: "/icons/react.svg" },
+        { name: "Javascript", imageUrl: "/icons/javascript.svg" }
+      ],
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-500/10",
       borderColor: "border-orange-500/30"
     },
     {
-      category: "Blockchain",
+      name: "Big Data & Analytics",
+      category: "Big Data & Analytics",
       icon: <Shield className="w-6 h-6" />,
-      technologies: ["Ethereum", "Solana", "Web3.js", "IPFS"],
+      technologies: [
+        { name: "Kafka", imageUrl: "/icons/kafka.svg" },
+        { name: "Apache Spark", imageUrl: "/icons/spark.svg" },
+        { name: "AWS Glue", imageUrl: "/icons/glue.svg" },
+        { name: "nifi", imageUrl: "/icons/nifi.svg" },
+        { name: "ArangoDB", imageUrl: "/icons/arangodb.svg" },
+        { name: "MongoDB", imageUrl: "/icons/mongodb.svg" }
+      ],
       color: "from-yellow-500 to-amber-500",
       bgColor: "bg-yellow-500/10",
       borderColor: "border-yellow-500/30"
@@ -95,7 +130,7 @@ const AboutUs = () => {
             <div className="absolute inset-0 -m-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl blur"></div>
             <div className="relative bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
               <p className="text-xl text-white/80 leading-relaxed mb-8 text-center">
-                We are a <span className="text-cyan-400 font-semibold">next-generation software company</span> based in Sri Lanka, 
+                We are a <span className="text-cyan-400 font-semibold">young software company</span> based in Sri Lanka, 
                 powered by engineers with <span className="text-purple-400 font-semibold">15+ years of expertise</span> in crafting 
                 <span className="font-semibold text-white"> enterprise-grade solutions</span> that are:
               </p>
@@ -103,11 +138,11 @@ const AboutUs = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="flex items-center justify-center space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                   <Check className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
-                  <span className="text-white/90 font-medium">Quantum Fast</span>
+                  <span className="text-white/90 font-medium">High performance</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                   <Check className="w-5 h-5 text-purple-400 group-hover:scale-110 transition-transform" />
-                  <span className="text-white/90 font-medium">Infinitely Scalable</span>
+                  <span className="text-white/90 font-medium">Scalable</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 hover:border-emerald-400/50 transition-all duration-300 group">
                   <Check className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform" />
@@ -122,7 +157,7 @@ const AboutUs = () => {
               <div className="text-center bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
                 <h3 className="text-2xl font-semibold text-white mb-3">Why Choose the Future?</h3>
                 <p className="text-xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-semibold">
-                  Our AI-Powered Expertise & Quantum Passion
+                  Our Expertise & Quantum Passion
                 </p>
               </div>
             </div>
@@ -217,10 +252,17 @@ const AboutUs = () => {
                         {stack.technologies.map((tech, techIndex) => (
                           <div 
                             key={techIndex}
-                            className="bg-white/5 backdrop-blur-md rounded-lg p-3 text-center border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
+                            className="flex items-center gap-2 bg-white/5 backdrop-blur-md rounded-lg p-3 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
                           >
+                            <img
+                              src={tech.imageUrl}
+                              width="48"
+                              height="24"
+                              className="rounded object-cover"
+                              alt={tech.name}
+                            />
                             <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
-                              {tech}
+                              {tech.name}
                             </span>
                           </div>
                         ))}
@@ -256,7 +298,7 @@ const AboutUs = () => {
                               className="bg-white/5 backdrop-blur-md rounded-lg p-3 text-center border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
                             >
                               <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
-                                {tech}
+                                {tech.name}
                               </span>
                             </div>
                           ))}

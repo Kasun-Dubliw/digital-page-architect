@@ -6,32 +6,32 @@ const Services = () => {
   const services = [
     {
       icon: <Code className="w-6 h-6" />,
-      title: "AI-Powered Development",
-      description: "Next-generation software solutions with AI integration and intelligent automation.",
+      title: "Consultation",
+      description: "After understanding your requirements, DubliW will help you review your architecture/design to provide critical inputs, considering all functional and non-functional requirements. Even when it comes to deciding on the technology stack or the tools to implement your systems, we can assist with that as well.",
       gradient: "from-cyan-400/10 to-blue-400/10",
       iconColor: "text-cyan-400",
       borderColor: "border-cyan-400/20"
     },
     {
       icon: <Settings className="w-6 h-6" />,
-      title: "Cloud-Native Architecture",
-      description: "Scalable microservices architecture with auto-scaling and distributed systems.",
+      title: "System architecture",
+      description: "Upon understanding business requirements, we'll design the entire system architecture, including the tech stack and other necessary tools. DubliW will brief your tech leads and developers of the project to ensure they understand our designs and, if necessary, conduct follow-ups. The outcomes of this engagement will include solution documentation and several briefing sessions.",
       gradient: "from-purple-400/10 to-pink-400/10",
       iconColor: "text-purple-400",
       borderColor: "border-purple-400/20"
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
-      title: "Neural Consultation",
-      description: "AI-driven technology consulting with predictive analytics and data intelligence.",
+      title: "Software development",
+      description: "Based on your requirements, we can help you build your software according to the given architecture - essentially providing end-to-end delivery. Our developers will assess the design documents and carry out the development accordingly",
       gradient: "from-emerald-400/10 to-green-400/10",
       iconColor: "text-emerald-400",
       borderColor: "border-emerald-400/20"
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Quantum Data Engineering",
-      description: "Revolutionary data solutions with real-time processing and neural networks.",
+      title: "Data Engineering",
+      description: "Our team can implement the entire data solution—building efficient, secure, and maintainable pipelines for batch or streaming data. From source integration to warehouse/lake setup, we ensure high-quality development that adheres to the approved architecture, with CI/CD, data quality, and monitoring built in.",
       gradient: "from-orange-400/10 to-red-400/10",
       iconColor: "text-orange-400",
       borderColor: "border-orange-400/20"
@@ -95,10 +95,10 @@ const Services = () => {
                     </CardDescription>
                     
                     {/* Learn More Link */}
-                    <div className="flex items-center text-sm text-cyan-400 group-hover:text-cyan-300 transition-colors cursor-pointer">
+                    {/* <div className="flex items-center text-sm text-cyan-400 group-hover:text-cyan-300 transition-colors cursor-pointer">
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               </div>
@@ -106,7 +106,7 @@ const Services = () => {
           </div>
 
           {/* Enhanced Call to Action */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
               <button className="group relative px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
                 <span className="flex items-center justify-center gap-2">
@@ -119,7 +119,7 @@ const Services = () => {
                 Get Consultation
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
