@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone, Zap } from 'lucide-react';
+import { Menu, X, Phone, Zap, Sparkles } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Futuristic Logo */}
-          <div className="flex items-center space-x-3">
+          {/* <div className="flex items-center space-x-3">
             <div className="relative">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse-glow">
                 <Zap className="w-6 h-6 text-white" />
@@ -28,7 +28,21 @@ const Header = () => {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Dubli</span>
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">W</span>
             </div>
-          </div>
+          </div> */}
+          <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
+                    <span className="text-xl font-bold text-white">W</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Dubli<span className="text-cyan-400">W</span>
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Sparkles className="w-3 h-3 text-cyan-400" />
+                      <span className="text-white/60 text-xs">Next-Gen Solutions</span>
+                    </div>
+                  </div>
+                </div>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">

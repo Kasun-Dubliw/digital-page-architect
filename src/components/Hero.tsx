@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent">
-                  Build
+                  Build 
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+            {/* <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">3+</div>
                 <div className="text-white/60 text-sm font-medium mt-1">Projects Delivered</div>
@@ -89,7 +89,7 @@ const Hero = () => {
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">24/7</div>
                 <div className="text-white/60 text-sm font-medium mt-1">Support</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Futuristic Visualization */}

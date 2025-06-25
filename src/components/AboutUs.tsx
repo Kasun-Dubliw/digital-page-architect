@@ -18,18 +18,18 @@ const AboutUs = () => {
   ];
 
   const techStacks = [
-    {
-      name: "AI & ML",
-      category: "AI & ML",
-      icon: <Sparkles className="w-6 h-6" />,
-      technologies: [
-        { name: "TensorFlow", imageUrl: "/icons/tensorflow.svg" },
-        { name: "PyTorch", imageUrl: "/icons/pytorch.svg" }
-      ],
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-500/10",
-      borderColor: "border-purple-500/30"
-    },
+    // {
+    //   name: "AI & ML",
+    //   category: "AI & ML",
+    //   icon: <Sparkles className="w-6 h-6" />,
+    //   technologies: [
+    //     { name: "TensorFlow", imageUrl: "/icons/tensorflow.svg" },
+    //     { name: "PyTorch", imageUrl: "/icons/pytorch.svg" }
+    //   ],
+    //   color: "from-purple-500 to-pink-500",
+    //   bgColor: "bg-purple-500/10",
+    //   borderColor: "border-purple-500/30"
+    // },
     {
       name: "Backend",
       category: "Backend", 
@@ -40,9 +40,9 @@ const AboutUs = () => {
         { name: "Node.js", imageUrl: "/icons/nodejs.svg" },
         { name: "Java", imageUrl: "/icons/java.svg" }
       ],
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "bg-cyan-500/10",
-      borderColor: "border-cyan-500/30",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/30"
     },
     {
       name: "Mobile",
@@ -77,7 +77,7 @@ const AboutUs = () => {
       icon: <Monitor className="w-6 h-6" />,
       technologies: [
         { name: "Angular", imageUrl: "/icons/angular.svg" },
-        { name: "PrimeNG", imageUrl: "/icons/primeng.svg" },
+        { name: "PrimeNG", imageUrl: "/icons/primeng.webp" },
         { name: "React", imageUrl: "/icons/react.svg" },
         { name: "Javascript", imageUrl: "/icons/javascript.svg" }
       ],
@@ -97,9 +97,9 @@ const AboutUs = () => {
         { name: "ArangoDB", imageUrl: "/icons/arangodb.svg" },
         { name: "MongoDB", imageUrl: "/icons/mongodb.svg" }
       ],
-      color: "from-yellow-500 to-amber-500",
-      bgColor: "bg-yellow-500/10",
-      borderColor: "border-yellow-500/30"
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "bg-cyan-500/10",
+      borderColor: "border-cyan-500/30",
     }
   ];
 
@@ -201,7 +201,7 @@ const AboutUs = () => {
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
                       <Globe className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="text-2xl font-bold text-white">Future Domains</h4>
+                    <h4 className="text-2xl font-bold text-white">Domains</h4>
                   </div>
                   <div className="space-y-3">
                     {domains.map((domain, index) => (
