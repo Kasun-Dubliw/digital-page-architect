@@ -22,7 +22,7 @@ export default {
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
+				// ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
@@ -133,7 +133,11 @@ export default {
 					'100%': {
 						transform: 'rotate(360deg)'
 					}
-				}
+				},
+				'floatY': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -142,7 +146,9 @@ export default {
 				'float': 'float 8s ease-in-out infinite',
 				'float-delayed': 'float-delayed 10s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-				'spin': 'spin 1s linear infinite'
+				'spin': 'spin 1s linear infinite',
+				'floating-slow': 'floatY 6s ease-in-out infinite',
+				'floating-fast': 'floatY 4s ease-in-out infinite',
 			},
 			backgroundImage: {
 				'grid-white': 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)'

@@ -18,18 +18,6 @@ const AboutUs = () => {
   ];
 
   const techStacks = [
-    // {
-    //   name: "AI & ML",
-    //   category: "AI & ML",
-    //   icon: <Sparkles className="w-6 h-6" />,
-    //   technologies: [
-    //     { name: "TensorFlow", imageUrl: "/icons/tensorflow.svg" },
-    //     { name: "PyTorch", imageUrl: "/icons/pytorch.svg" }
-    //   ],
-    //   color: "from-purple-500 to-pink-500",
-    //   bgColor: "bg-purple-500/10",
-    //   borderColor: "border-purple-500/30"
-    // },
     {
       name: "Backend",
       category: "Backend", 
@@ -106,11 +94,11 @@ const AboutUs = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-gradient-xy"></div>
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float-delayed"></div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
