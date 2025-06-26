@@ -28,7 +28,7 @@ const Portfolio = () => {
       id: 2,
       title: "fACT",
       subtitle: "University of Auckland (New Zealand)",
-      description: "fACT is software designed to b e used in treating patients with mental health conditions . W e are working with the client to build the platform from the ground up, starting from architectural design t o implementation. The biggest challenge is data security, as the system will handle patients' health data. fACT includes a .NET backend and Android/iOS applications for both tablets and mobile phones.",
+      description: "fACT is software designed to be used in treating patients with mental health conditions. We are working with the client to build the platform from the ground up, starting from architectural design to implementation. The biggest challenge is data security, as the system will handle patients' health data. fACT includes a .NET backend and Android/iOS applications for both tablets and mobile phones.",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
       technologies: [".Net Core", "Posgress SQL", "Android", "iOS", "AWS"],
       category: "Healthcare Innovation",
@@ -41,7 +41,7 @@ const Portfolio = () => {
       id: 3,
       title: "TeaBase",
       subtitle: "BPH 200 Pte Ltd (Singapore)",
-      description: "TeaBase is a SaaS application for the tea industry, designed for market price forecasting and providing the required analytics for business operators to make data-driven decisions. W e helped the team b y analyzing their business requirements, reviewing the software architecture they designed, and proposing an improved architecture that includes ETL pipelines capable of handling large amounts of data while incorporating necessary security controls i n a cost-effective manner. The system was designed using AWS-managed components.",
+      description: "TeaBase is a SaaS application for the tea industry, designed for market price forecasting and providing the required analytics for business operators to make data-driven decisions. We helped the team by analyzing their business requirements, reviewing the software architecture they designed, and proposing an improved architecture that includes ETL pipelines capable of handling large amounts of data while incorporating necessary security controls in a cost-effective manner. The system was designed using AWS-managed components.",
       image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&h=400&fit=crop",
       technologies: ["Python", "AWS", "Machine Learning", "Data Analytics", "ETL"],
       category: "Agricultural Intelligence",
@@ -91,7 +91,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
             {projects.map((project) => (
               <div key={project.id} className="group">
-                <Card className="relative bg-[#30303E] backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 h-full overflow-hidden">
+                <Card className="relative bg-[#30303E] backdrop-blur-sm border border-[#30303E]/10 hover:border-[#30303E]/20 transition-all duration-300 transform hover:-translate-y-1 h-full overflow-hidden">
                   {/* Project Image */}
                   <div className="relative aspect-video w-full overflow-hidden">
                     <img 

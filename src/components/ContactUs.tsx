@@ -148,8 +148,8 @@ const ContactUs = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={5}
-                    className="text-[#515167] placeholder:text-[#515167]/50 border-none focus:border-none focus:outline-none rounded-xl h-12"
+                    rows={50}
+                    className="text-[#515167] placeholder:text-[#515167]/50 border-none focus:border-none focus:outline-none rounded-xl h-96"
                   />
                   
                   <button 

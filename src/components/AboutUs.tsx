@@ -1,17 +1,18 @@
 import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import TechStackCarousel from './TechStackCarousel';
+import TechStack from './TechStack';
 
 const AboutUs = () => {
   const expertise = [
     "Cloud-based applications with cost-effectiveness in mind",
-    "Scalable software platforms utilizing microservices architecture", 
+    "Scalable software platforms utilizing microservices architecture",
     "Data pipelines to handle massive ammounts of data",
     "Data security and platform security with zero-trust architecture"
   ];
 
   const domains = [
     "Finance",
-    "HealthCare", 
+    "HealthCare",
     "Smart Travel & Mobility",
     "Educataion & E-Learning",
     "Real State",
@@ -20,7 +21,7 @@ const AboutUs = () => {
   const techStacks = [
     {
       name: "Backend",
-      category: "Backend", 
+      category: "Backend",
       icon: <Server className="w-6 h-6" />,
       technologies: [
         { name: ".Net", imageUrl: "/icons/dotnet.svg" },
@@ -34,7 +35,7 @@ const AboutUs = () => {
     },
     {
       name: "Mobile",
-      category: "Mobile", 
+      category: "Mobile",
       icon: <Smartphone className="w-6 h-6" />,
       technologies: [
         { name: "Android", imageUrl: "/icons/android.svg" },
@@ -92,37 +93,31 @@ const AboutUs = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 relative overflow-hidden">
-      {/* Animated Background */}
-      {/* <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-gradient-xy"></div>
-        <div className="absolute top-1/4 left-10 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float-delayed"></div>
-      </div> */}
+    <section id="about" className="py-20 bg-gradient-to-t from-[#E9EDF4] via-[#F2F5FB] to-white relative overflow-hidden">
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6">
-              <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-              Innovation at Scale
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#F2F5FB] backdrop-blur-sm border border-[#515167] text-[#515167] text-sm font-medium mb-6">
+              <Zap className="w-4 h-4 mr-2 text-[#515167]" />
+             Innovation at Scale
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">About</span>
-              <span className="text-white"> Us</span>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#515167]">
+               About <span className="bg-gradient-to-r from-[#363636] to-[#515167] bg-clip-text text-transparent">Us</span>
             </h2>
           </div>
-          
+
           {/* Company Introduction */}
           <div className="relative mb-16">
-            <div className="absolute inset-0 -m-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl blur"></div>
-            <div className="relative bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
+            {/* <div className="absolute inset-0 -m-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl blur"></div> */}
+            <div className="relative bg-[#3F3F59] backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
               <p className="text-xl text-white/80 leading-relaxed mb-8 text-center">
-                We are a <span className="text-cyan-400 font-semibold">young software company</span> based in Sri Lanka, 
-                powered by engineers with <span className="text-purple-400 font-semibold">15+ years of expertise</span> in crafting 
+                We are a <span className="text-[#F2F5FB] font-semibold">young software company</span> based in Sri Lanka,
+                powered by engineers with <span className="text-[#E9EDF4] font-semibold">10+ years of expertise</span> in crafting
                 <span className="font-semibold text-white"> enterprise-grade solutions</span> that are:
               </p>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="flex items-center justify-center space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                   <Check className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
@@ -141,9 +136,9 @@ const AboutUs = () => {
                   <span className="text-white/90 font-medium">Cost Optimized</span>
                 </div>
               </div>
-              
-              <div className="text-center bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-                <h3 className="text-2xl font-semibold text-white mb-3">Why Choose the Future?</h3>
+
+              <div className="text-center  backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-semibold text-white mb-3">Why Choose the Dubliw?</h3>
                 <p className="text-xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-semibold">
                   Our Expertise & Quantum Passion
                 </p>
@@ -154,25 +149,24 @@ const AboutUs = () => {
           {/* Expertise and Domains Section */}
           <div className="mb-16">
             <h3 className="text-4xl font-bold text-center mb-12">
-              <span className="text-white">Explore Our </span>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Quantum Capabilities</span>
+              <span className="text-[#363636]">Explore Our </span>
+              <span className="bg-gradient-to-r from-[#363636] to-[#515167] bg-clip-text text-transparent">Quantum Capabilities</span>
             </h3>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Expertise */}
               <div className="relative group">
-                <div className="absolute inset-0 -m-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="relative bg-[#3F3F59] backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#363636] rounded-2xl flex items-center justify-center mr-4">
                       <Code className="w-6 h-6 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-white">Quantum Expertise</h4>
                   </div>
-                  <p className="text-lg font-semibold text-cyan-400 mb-4">Engineering & Architecting:</p>
+                  <p className="text-lg font-semibold text-[#F2F5FB] mb-4">Engineering & Architecting:</p>
                   <div className="space-y-3">
                     {expertise.map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+                      <div key={index} className="flex items-start space-x-3 bg-[#] backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                         <Check className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                         <span className="text-white/90">{item}</span>
                       </div>
@@ -183,10 +177,9 @@ const AboutUs = () => {
 
               {/* Domains */}
               <div className="relative group">
-                <div className="absolute inset-0 -m-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <div className="relative bg-[#3F3F59] backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#363636] rounded-2xl flex items-center justify-center mr-4">
                       <Globe className="w-6 h-6 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-white">Domains</h4>
@@ -194,115 +187,11 @@ const AboutUs = () => {
                   <div className="space-y-3">
                     {domains.map((domain, index) => (
                       <div key={index} className="flex items-center space-x-3 bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-purple-400/30 transition-all duration-300 group">
-                        <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                        <div className="w-3 h-3 bg-gradient-to-r to-[#363636] from-white rounded-full group-hover:scale-125 transition-transform"></div>
                         <span className="text-lg text-white/90 font-medium">{domain}</span>
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Redesigned Tech Arsenal Section */}
-          <div>
-            <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold mb-4">
-                <span className="text-white">Our </span>
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Tech Arsenal</span>
-              </h3>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Cutting-edge technologies and frameworks that power our innovative solutions
-              </p>
-            </div>
-            
-            {/* Horizontal Scrolling Layout for Mobile, Grid for Desktop */}
-            <div className="relative">
-              {/* Desktop Grid Layout */}
-              <div className="hidden lg:grid lg:grid-cols-3 gap-6">
-                {techStacks.map((stack, index) => (
-                  <div key={index} className="group relative">
-                    <div className={`absolute inset-0 -m-1 bg-gradient-to-r ${stack.color} rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                    <div className={`relative ${stack.bgColor} backdrop-blur-xl border ${stack.borderColor} rounded-2xl p-6 h-full hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1`}>
-                      
-                      {/* Icon and Category */}
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${stack.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                          {stack.icon}
-                        </div>
-                        <h4 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
-                          {stack.category}
-                        </h4>
-                      </div>
-                      
-                      {/* Technologies Grid */}
-                      <div className="grid grid-cols-2 gap-3">
-                        {stack.technologies.map((tech, techIndex) => (
-                          <div 
-                            key={techIndex}
-                            className="flex items-center gap-2 bg-white/5 backdrop-blur-md rounded-lg p-3 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
-                          >
-                            <img
-                              src={tech.imageUrl}
-                              width="48"
-                              height="24"
-                              className="rounded object-cover"
-                              alt={tech.name}
-                            />
-                            <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
-                              {tech.name}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Mobile Horizontal Scroll Layout */}
-              <div className="lg:hidden overflow-x-auto pb-6">
-                <div className="flex gap-4 w-max">
-                  {techStacks.map((stack, index) => (
-                    <div key={index} className="group relative w-72 flex-shrink-0">
-                      <div className={`absolute inset-0 -m-1 bg-gradient-to-r ${stack.color} rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                      <div className={`relative ${stack.bgColor} backdrop-blur-xl border ${stack.borderColor} rounded-2xl p-6 h-full hover:border-white/30 transition-all duration-300`}>
-                        
-                        {/* Icon and Category */}
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className={`w-12 h-12 bg-gradient-to-r ${stack.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                            {stack.icon}
-                          </div>
-                          <h4 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
-                            {stack.category}
-                          </h4>
-                        </div>
-                        
-                        {/* Technologies Grid */}
-                        <div className="grid grid-cols-2 gap-3">
-                          {stack.technologies.map((tech, techIndex) => (
-                            <div 
-                              key={techIndex}
-                              className="bg-white/5 backdrop-blur-md rounded-lg p-3 text-center border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 group/tech"
-                            >
-                              <span className="text-sm font-medium text-white/90 group-hover/tech:text-white transition-colors">
-                                {tech.name}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Scroll Indicator for Mobile */}
-              <div className="lg:hidden flex justify-center mt-4">
-                <div className="flex gap-2">
-                  {Array.from({ length: Math.ceil(techStacks.length / 2) }).map((_, index) => (
-                    <div key={index} className="w-2 h-2 bg-white/20 rounded-full"></div>
-                  ))}
                 </div>
               </div>
             </div>
