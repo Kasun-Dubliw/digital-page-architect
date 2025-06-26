@@ -21,7 +21,7 @@ const Portfolio = () => {
       category: "Real Estate Intelligence",
       status: "Live",
       statusColor: "emerald",
-      progress: 100,
+      progress: 65,
       year: "2024"
     },
     {
@@ -34,7 +34,7 @@ const Portfolio = () => {
       category: "Healthcare Innovation",
       status: "Development",
       statusColor: "yellow",
-      progress: 85,
+      progress: 100,
       year: "2024"
     },
     {
@@ -47,7 +47,7 @@ const Portfolio = () => {
       category: "Agricultural Intelligence",
       status: "Scaling",
       statusColor: "cyan",
-      progress: 100,
+      progress: 55,
       year: "2022"
     }
   ];
@@ -64,34 +64,34 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="relative py-24 overflow-hidden">
       {/* Simplified Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"></div>
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-[#E9EDF4] to-white"></div>
+
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Cleaner Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/80 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
-              Our Portfolio
-            </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              A Few <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#F2F5FB] backdrop-blur-sm border border-[#515167] text-[#515167] text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2 text-[#515167]" />
+             Our Portfolio
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#515167]">
+               A Few <span className="bg-gradient-to-r from-[#363636] to-[#515167] bg-clip-text text-transparent">Projects</span>
             </h2>
             
-            <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-[#515167] leading-relaxed max-w-2xl mx-auto">
               Explore our revolutionary applications that push the boundaries of technology
             </p>
+
           </div>
           
           {/* Improved Portfolio Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
             {projects.map((project) => (
               <div key={project.id} className="group">
-                <Card className="relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 h-full overflow-hidden">
+                <Card className="relative bg-[#30303E] backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1 h-full overflow-hidden">
                   {/* Project Image */}
                   <div className="relative aspect-video w-full overflow-hidden">
                     <img 
@@ -124,15 +124,15 @@ const Portfolio = () => {
                     <div
                       className="flex items-start justify-between gap-3">
                       <div className="flex-1">
-                        <CardTitle className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-1">
+                        <CardTitle className="text-lg font-bold  group-hover:text-white text-[#E9EDF4] transition-colors mb-1">
                           {project.title}
                         </CardTitle>
-                        <p className="text-sm text-purple-400 font-medium">
+                        <p className="text-sm text-[#F2F5FB] font-medium">
                           {project.subtitle}
                         </p>
                       </div>
                       <div className="flex gap-1">
-                        <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-cyan-400 hover:bg-white/20 transition-all">
+                        <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-white hover:bg-white/20 transition-all">
                           <ExternalLink className="w-3 h-3" />
                         </button>
                         {/* <button className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white/60 hover:text-purple-400 hover:bg-white/20 transition-all">
@@ -170,7 +170,7 @@ const Portfolio = () => {
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-1.5">
                         <div 
-                          className="h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-1000"
+                          className="h-1.5 rounded-full bg-gradient-to-r from-[#ffffff] to-[#E9EDF4] transition-all duration-1000"
                           style={{ width: `${project.progress}%` }}
                         ></div>
                       </div>

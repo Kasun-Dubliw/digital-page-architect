@@ -102,7 +102,7 @@ const ContactUs = () => {
             
             {/* Contact Form - Improved */}
             <div className="lg:col-span-3">
-              <div className="bg-[#F2F5FB] backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              <div className="bg-[#E9EDF4] backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-[#515167] mb-6 flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#30303E] rounded-lg flex items-center justify-center">
                     <Send className="w-4 h-4 text-white" />
