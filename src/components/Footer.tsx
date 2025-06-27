@@ -36,7 +36,21 @@ const Footer = () => {
               <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div>
-                    <img src="/icons/image.png" alt="DubliW Logo" className="" />
+                    <>
+                      {/* Show on screens >= md (tablet and up) */}
+                      <img
+                        src="/icons/logo.svg"
+                        alt="DubliW Logo"
+                        className="hidden md:block"
+                      />
+
+                      {/* Show on screens < md (mobile) */}
+                      <img
+                        src="/icons/tab-logo.svg"
+                        alt="DubliW Tab Logo"
+                        className="block md:hidden"
+                      />
+                    </>
                     <div className="flex items-center gap-2 mt-1">
                       <Sparkles className="w-3 h-3 text-[#30303E]" />
                       <span className="text-[#30303E] text-xs">Next-Gen Solutions</span>

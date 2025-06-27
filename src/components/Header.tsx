@@ -16,8 +16,24 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-[#F2F5FB] backdrop-blur-xl shadow-lg z-50 border-b border-white/10">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Futuristic Logo */}
-          <img src="/icons/image.png" alt="DubliW Logo" className="" />
+          {/* <img src="/icons/tab-logo.svg" alt="DubliW Logo" className="" /> */}
+
+          {/* Responsive Logo */}
+          <>
+            {/* Show on screens >= md (tablet and up) */}
+            <img
+              src="/icons/logo.svg"
+              alt="DubliW Logo"
+              className="hidden md:block"
+            />
+
+            {/* Show on screens < md (mobile) */}
+            <img
+              src="/icons/tab-logo.svg"
+              alt="DubliW Tab Logo"
+              className="block md:hidden"
+            />
+          </>
 
           {/* <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
@@ -84,7 +100,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-[#363636] backdrop-blur-md border border-white/20 text-white  transition-all duration-300"
+            className="lg:hidden p-2 rounded-lg text-[#363636] backdrop-blur-md border border-white/20  transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
