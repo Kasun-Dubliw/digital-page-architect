@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { MapPin, Phone, Mail, Send, Sparkles } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -24,9 +25,23 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // TODO: Add email sending functionality
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    emailjs.send(
+      'service_m3ax3e3',
+      'template_r2sz36a',
+      formData,
+      'hn-DEqxZ9GQMzETpD'
+    ).then(
+      (result) => {
+        console.log('Email sent successfully:', result.text);
+        alert('Email sent!');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      },
+      (error) => {
+        console.error('Email send failed:', error.text);
+        alert('Failed to send email');
+      }
+    );
+    
   };
 
   return (

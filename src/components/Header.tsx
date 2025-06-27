@@ -89,7 +89,8 @@ const Header = () => {
             </button>
 
             {/* Clean Call Button */}
-            <div className="flex items-center bg-[#363636] text-[#F2F5FB] px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-white/20 backdrop-blur-md">
+            <div onClick={() => window.location.href = 'tel:+94779821079'}
+            className="flex items-center bg-[#363636] text-[#F2F5FB] px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-white/20 backdrop-blur-md" >
               <Phone className="w-5 h-5 mr-3" />
               <div className="flex flex-col">
                 <span className="text-xs font-medium">Call Us</span>
@@ -141,7 +142,7 @@ const Header = () => {
               >
                 Contact Us
               </button>
-              <div className="flex items-center bg-gradient-to-r from-[#363636] to-[#515167] text-white px-6 py-3 rounded-2xl shadow-lg mt-4 w-fit">
+              <div onClick={() => window.location.href = 'tel:+94779821079'} className="flex items-center bg-gradient-to-r from-[#363636] to-[#515167] text-white px-6 py-3 rounded-2xl shadow-lg mt-4 w-fit">
                 <Phone className="w-5 h-5 mr-3" />
                 <div className="flex flex-col">
                   <span className="text-xs font-medium opacity-90">Call Us</span>
