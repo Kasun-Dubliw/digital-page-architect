@@ -30,7 +30,7 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Company Info - Simplified */}
             <div className="md:col-span-1">
               <div className="mb-8">
@@ -39,46 +39,48 @@ const Footer = () => {
                     <>
                       {/* Show on screens >= md (tablet and up) */}
                       <img
-                        src="/icons/logo.svg"
+                        src="/icons/logo-or.svg"
                         alt="DubliW Logo"
                         className="hidden md:block"
                       />
 
                       {/* Show on screens < md (mobile) */}
                       <img
-                        src="/icons/tab-logo.svg"
+                        src="/icons/tab-logo-or.svg"
                         alt="DubliW Tab Logo"
                         className="block md:hidden"
                       />
                     </>
-                    <div className="flex items-center gap-2 mt-1">
+                    {/* <div className="flex items-center gap-2 mt-1">
                       <Sparkles className="w-3 h-3 text-[#30303E]" />
                       <span className="text-[#30303E] text-xs">Next-Gen Solutions</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
-                <p className="text-[#363636] leading-relaxed mb-4">
+                <p className="text-[#2e2a3b] leading-relaxed mb-4">
                   Your Trusted Partner for Innovative IT Solutions and Modern Software Architecture — Designed for a Remote-First World.
                 </p>
 
                 <div className="w-16 h-0.5 bg-gradient-to-r from-[#3F3F59] to-[#363636] rounded-full"></div>
-                <div className="mt-4 text-[#30303E] text-sm">
+                <div className="mt-4 text-[#2e2a3b] text-sm">
                   <p className="mb-2">Follow us on:</p>
                   <div className="flex items-center gap-4">
                     <a
                       href="https://www.facebook.com/dubliw"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#30303E] hover:text-[#515167] transition-colors duration-700"
+                      className="text-[#2e2a3b] hover:text-[#a9524b] transition-colors duration-700"
                     >
                       <Facebook className="w-5 h-5" />
+                      
                     </a>
+                    
                     <a
                       href="https://www.twitter.com/dubliw"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#30303E] hover:text-[#515167] transition-colors duration-700"
+                      className="text-[#2e2a3b] hover:text-[#a9524b] transition-colors duration-700"
                     >
                       <Twitter className="w-5 h-5" />
                     </a>
@@ -86,7 +88,7 @@ const Footer = () => {
                       href="https://www.instagram.com/dubliw"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#30303E] hover:text-[#515167] transition-colors duration-700"
+                      className="text-[#2e2a3b] hover:text-[#a9524b] transition-colors duration-700"
                     >
                       <Instagram className="w-5 h-5" />
                     </a>
@@ -94,7 +96,7 @@ const Footer = () => {
                       href="https://www.instagram.com/dubliw"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#30303E] hover:text-[#515167] transition-colors duration-700"
+                      className="text-[#2e2a3b] hover:text-[#a9524b] transition-colors duration-700"
                     >
                       <Linkedin className="w-5 h-5" />
                     </a>
@@ -104,12 +106,11 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links - Cleaner Design */}
+            {/* Services - Cleaner Design */}
             <div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-[#30303E] mb-6 flex items-center gap-2">
-                  <ExternalLink className="w-4 h-4 text-[#30303E]" />
-                  Quick Links
+                <h4 className="text-lg font-semibold mb-6 flex items-center gap-2 text-[#a9524b] transition-colors duration-700">
+                  Services
                 </h4>
                 <ul className="space-y-3">
                   {[
@@ -133,41 +134,69 @@ const Footer = () => {
               </div>
             </div>
 
+            <div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <h4 className="text-lg font-semibold mb-6 flex items-center gap-2 text-[#a9524b] transition-colors duration-700">
+                  Technologies
+                </h4>
+                <ul className="list-none space-y-3">
+                  {[
+                    { name: "Strategic Consultation", href: "#home" },
+                    { name: "System Architecture", href: "#about" },
+                    { name: "Software Development", href: "#services" },
+                    { name: "MVP Development", href: "#portfolio" }
+                  ].map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="flex items-center gap-2 hover:text-[#a9524b] font-semibold transition-colors duration-700 text-sm"
+                      >
+                        <div className="w-1 h-1 bg-[#30303E] hover:bg-[#a9524b]  rounded-full"></div>
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            
+
             {/* Contact Info - Better Organized */}
             <div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-[#30303E] mb-6 flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-[#30303E]" />
+                <h4 className="text-lg font-semibold mb-6 flex items-center gap-2 text-[#a9524b] transition-colors duration-700">
+                  {/* <Mail className="w-4 h-4 text-[#2e2a3b]" /> */}
                   Contact Info
                 </h4>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-[#30303E] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 bg-[#a9524b] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Mail className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-[#30303E] text-xs mb-1">Email</p>
-                      <p className="text-[#30303E]/100 text-sm">hello@dubliw.com</p>
+                      <p className="text-[#2e2a3b] text-xs mb-1">Email</p>
+                      <p className="text-[#2e2a3b]/100 text-sm">hello@dubliw.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-[#30303E] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 bg-[#a9524b] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Phone className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-[#30303E] text-xs mb-1">Phone</p>
-                      <p className="text-[#30303E]/100 text-sm">+94 77 9821079</p>
+                      <p className="text-[#2e2a3b] text-xs mb-1">Phone</p>
+                      <p className="text-[#2e2a3b]/100 text-sm">+94 77 9821079</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-[#30303E] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 bg-[#a9524b] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                       <MapPin className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-[#30303E] text-xs mb-1">Address</p>
-                      <p className="text-[#30303E]/100 text-sm leading-relaxed">
+                      <p className="text-[#2e2a3b] text-xs mb-1">Address</p>
+                      <p className="text-[#2e2a3b]/100 text-sm leading-relaxed">
                         68/3, Sandun Uyana<br />
                         Hedigama, Piliyandala<br />
                         Sri Lanka
@@ -185,7 +214,7 @@ const Footer = () => {
 
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
               <div className="text-[#30303E] text-sm">
-                &copy; 2025 DubliW. All rights reserved.
+                &copy; 2024 DubliW. Delivering world-class software solutions from Sri Lanka to global clients.
               </div>
 
               <div className="flex items-center gap-2 text-[#30303E] text-sm">

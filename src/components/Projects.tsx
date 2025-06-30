@@ -6,19 +6,19 @@ const Projects = () => {
   const Projects = [
     {
       icon: <Rocket size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-      title: "Rapid MVP Delivery",
-      description: "Get your product to market fast with our streamlined development process and proven methodologies."
+      title: "project 01",
+      description: "ongoing"
     },
-    {
-      icon: <DollarSign size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-      title: "Budget-Friendly Pricing",
-      description: "Competitive rate based on your budget without compromising on quality or expertise."
-    },
-    {
-      icon: <Hammer size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-      title: "Senior Architecture Guidance",
-      description: "15+ years of experience ensuring your systems are built for scale and performance."
-    },
+    // {
+    //   icon: <DollarSign size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
+    //   title: "Budget-Friendly Pricing",
+    //   description: "Competitive rate based on your budget without compromising on quality or expertise."
+    // },
+    // {
+    //   icon: <Hammer size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
+    //   title: "Senior Architecture Guidance",
+    //   description: "15+ years of experience ensuring your systems are built for scale and performance."
+    // },
   ];
 
   return (
