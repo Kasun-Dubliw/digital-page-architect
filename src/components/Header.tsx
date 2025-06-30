@@ -22,14 +22,14 @@ const Header = () => {
           <>
             {/* Show on screens >= md (tablet and up) */}
             <img
-              src="/icons/logo.svg"
+              src="/icons/logo-or.svg"
               alt="DubliW Logo"
               className="hidden md:block"
             />
 
             {/* Show on screens < md (mobile) */}
             <img
-              src="/icons/tab-logo.svg"
+              src="/icons/tab-logo-or.svg"
               alt="DubliW Tab Logo"
               className="block md:hidden"
             />
@@ -54,43 +54,47 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="bg-[#F2F5FB] text-[#30303E] transition-all duration-700 font-medium py-2 px-4 rounded-lg hover:bg-[#3F3F59] backdrop-blur-md relative group hover:text-[#F2F5FB] border border-transparent hover:shadow-sm"
+              className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Home
-              {/* <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#30303E] to-[#515167] group-hover:w-full transition-all duration-300"></div> */}
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#a9524b] transition-all duration-300 group-hover:w-full"></span>
             </button>
+
             <button
-              onClick={() => scrollToSection('about')}
-              className="bg-[#F2F5FB] text-[#30303E] transition-all duration-700 font-medium py-2 px-4 rounded-lg hover:bg-[#3F3F59] backdrop-blur-md relative group hover:text-[#F2F5FB] border border-transparent hover:shadow-sm"
-            >
-              About Us
-              {/* <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div> */}
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="bg-[#F2F5FB] text-[#30303E] transition-all duration-700 font-medium py-2 px-4 rounded-lg hover:bg-[#3F3F59] backdrop-blur-md relative group hover:text-[#F2F5FB] border border-transparent hover:shadow-sm"
+              onClick={() => scrollToSection('home')}
+              className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Services
-              {/* <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div> */}
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#a9524b] transition-all duration-300 group-hover:w-full"></span>
             </button>
+
             <button
-              onClick={() => scrollToSection('portfolio')}
-              className="bg-[#F2F5FB] text-[#30303E] transition-all duration-700 font-medium py-2 px-4 rounded-lg hover:bg-[#3F3F59] backdrop-blur-md relative group hover:text-[#F2F5FB] border border-transparent hover:shadow-sm"
+              onClick={() => scrollToSection('home')}
+              className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
-              Portfolio
-              {/* <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div> */}
+              Expertise
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#a9524b] transition-all duration-300 group-hover:w-full"></span>
             </button>
+
             <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#F2F5FB] text-[#30303E] transition-all duration-700 font-medium py-2 px-4 rounded-lg hover:bg-[#3F3F59] backdrop-blur-md relative group hover:text-[#F2F5FB] border border-transparent hover:shadow-sm"
+              onClick={() => scrollToSection('home')}
+              className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
-              Contact Us
-              {/* <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div> */}
+              Projects
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#a9524b] transition-all duration-300 group-hover:w-full"></span>
+            </button>
+
+            <button
+              onClick={() => scrollToSection('home')}
+              className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
+            >
+              Contact
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#a9524b] transition-all duration-300 group-hover:w-full"></span>
             </button>
 
             {/* Clean Call Button */}
             <div onClick={() => window.location.href = 'tel:+94779821079'}
-            className="flex items-center bg-[#363636] text-[#F2F5FB] px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-white/20 backdrop-blur-md" >
+              className="flex items-center bg-[#2e2a3b] text-[#f1f5f9] px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl hover:text-[#a9524b] transition-all duration-500 transform hover:-translate-y-1 border border-white/20 backdrop-blur-md" >
               <Phone className="w-5 h-5 mr-3" />
               <div className="flex flex-col">
                 <span className="text-xs font-medium">Call Us</span>
@@ -101,7 +105,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-[#363636] backdrop-blur-md border border-white/20  transition-all duration-300"
+            className="lg:hidden p-2 rounded-lg text-[#2e2a3b] backdrop-blur-md border border-white/20  transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -114,35 +118,36 @@ const Header = () => {
             <div className="flex flex-col space-y-2 pt-4">
               <button
                 onClick={() => scrollToSection('home')}
-                className="text-[#363636] hover:text-[#F2F5FB] hover:bg-[#515167] hover:bg-[#515167] transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
+                className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Home
               </button>
+
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-[#363636] hover:text-[#F2F5FB] hover:bg-[#515167] hover:bg-[#515167] transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
-              >
-                About Us
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-[#363636] hover:text-[#F2F5FB] hover:bg-[#515167] hover:bg-[#515167] transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
+               className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Services
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
-                className="text-[#363636] hover:text-[#F2F5FB] hover:bg-[#515167] hover:bg-[#515167] transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
+                onClick={() => scrollToSection('services')}
+               className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
-                Portfolio
+                Expertise
+              </button>
+              <button
+                onClick={() => scrollToSection('portfolio')}
+               className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
+              >
+                Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-[#363636] hover:text-[#F2F5FB] hover:bg-[#515167] hover:bg-[#515167] transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
+               className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Contact Us
               </button>
-              <div onClick={() => window.location.href = 'tel:+94779821079'} className="flex items-center bg-gradient-to-r from-[#363636] to-[#515167] text-white px-6 py-3 rounded-2xl shadow-lg mt-4 w-fit">
+              <div onClick={() => window.location.href = 'tel:+94779821079'} className="flex items-center bg-[#2e2a3b] text-[#f1f5f9] px-6 py-3 rounded-2xl shadow-lg mt-4 w-fit">
                 <Phone className="w-5 h-5 mr-3" />
                 <div className="flex flex-col">
                   <span className="text-xs font-medium opacity-90">Call Us</span>
