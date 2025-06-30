@@ -56,12 +56,12 @@ const HeroV1 = () => {
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <button className="group relative px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 bg-[#a9524b] text-[#f1f5f9] font-medium rounded-lg hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
                   <span className="flex items-center justify-center gap-2">
-                    Fix My Development Problems
+                  Schedule Free Consultation
                   </span>
                 </button>
 
                 <button className="group px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 text-[#2e2a3b] font-medium rounded-lg border border border-[#2e2a3b] hover:border-[#a9524b] hover:text-[#a9524b] hover:-translate-y-0.5 transition duration-300">
-                  See How We Do It
+                  View Our Services
                 </button>
             </div>
 
