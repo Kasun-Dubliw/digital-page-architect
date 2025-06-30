@@ -40,13 +40,11 @@ const HeroV1 = () => {
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight leading-relaxed">
                 <span className="bg-[#2e2a3b] to-white bg-clip-text text-transparent">
                   Trusted Software Outsourcing Partner for Growing Businesses
                 </span>
-                <br />
               </h1>
-              
               <p className="text-xl md:text-2xl text-[#2e2a3b] leading-relaxed">
                 We help startups and SMEs build scalable web applications, robust backend systems, and market-ready MVPs with 15+ years of architectural expertise.
               </p>

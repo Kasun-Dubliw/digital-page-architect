@@ -108,6 +108,16 @@
     background: linear-gradient(#3e3f56, #3e3f56) padding-box, linear-gradient(180deg, #dc2626 0%, #dc2626 45%, #a9524b 50%, #22c55e 55%, #22c55e 100%) border-box;
 }
 
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
 
 .test {
   background-color: #f1f5f9;

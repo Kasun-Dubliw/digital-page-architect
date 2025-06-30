@@ -1,4 +1,4 @@
-import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles } from 'lucide-react';
+import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck } from 'lucide-react';
 import TechStackCarousel from './TechStackCarousel';
 import TechStack from './TechStack';
 
@@ -33,7 +33,7 @@ const AboutUs = () => {
       title: "Building Something That Won't Scale",
       problemValue: "💸",
       problemLabel: "Costly Rebuilds",
-      solutionValue: "✅",
+      solutionValue: <SquareCheck fill="green" size={48} />,
       solutionLabel: "Built to Scale",
       description:
         "Don't waste months rebuilding when you grow. Our architects design for your future, not just today.",
@@ -55,7 +55,7 @@ const AboutUs = () => {
               We Solve Real Development <span className="bg-[#a9524b] bg-clip-text text-transparent">Challenges</span>
             </h2>
 
-            <p className="text-lg text-[#f1f5f9] leading-relaxed max-w-2xl mx-auto opacity-70 text-[1.1rem]">
+            <p className="text-base text-lg text-[#f1f5f9] leading-relaxed max-w-2xl mx-auto opacity-70 text-[1.1rem] section-subtitle">
               Build smart, scale fast — without breaking the bank. We specialize in helping startups and SMEs bring their product ideas to life with senior-level expertise, startup-friendly pricing, and flexible team scaling.
             </p>
           </div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
 
                 <div className="flex flex-col items-center text-center">
                   <span className="text-[2.5rem] font-bold mb-2 block text-[#22c55e]">
-                    {item.solutionValue}
+                    {typeof item.solutionValue === "string" ? item.solutionValue : item.solutionValue}
                   </span>
                   <div className="text-base font-semibold mb-3 text-[#f1f5f9]">{item.solutionLabel}</div>
                 </div>
