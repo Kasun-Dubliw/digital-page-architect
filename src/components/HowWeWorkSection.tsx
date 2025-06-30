@@ -6,24 +6,33 @@ const HowWeWorkSection = () => {
   const services = [
     {
       listItems: [
-        "We offer flexible engagement models tailored to your project's needs, from strategic consultation to end-to-end software delivery.",
+        "Optimize existing systems",
+        "Validate technical ideas",
+        "Choose the right technology stack",
+        "Prevent costly architectural mistakes"
       ],
-      title: "Rapid MVP Delivery",
-      description: "Get your product to market fast with our streamlined development process and proven methodologies."
+      title: "Strategic Consultation",
+      description: "We help you review your architecture and design to provide critical inputs, considering all functional and non-functional requirements. From technology stack decisions to implementation tools, we guide you through every technical decision."
     },
     {
       listItems: [
-        "We offer flexible engagement models tailored to your project's needs, from strategic consultation to end-to-end software delivery.",
+        "Solid foundation for development",
+        "Clear technical roadmap",
+        "Reduced technical debt",
+        "Comprehensive solution documentation"
       ],
-      title: "Budget-Friendly Pricing",
-      description: "Competitive rate based on your budget without compromising on quality or expertise."
+      title: "System Architecture",
+      description: "Upon understanding your business requirements, we design the entire system architecture, including tech stack and necessary tools. We brief your tech leads and developers, ensuring they understand our designs with follow-up sessions."
     },
     {
       listItems: [
-        "We offer flexible engagement models tailored to your project's needs, from strategic consultation to end-to-end software delivery.",
+        "Full-cycle development",
+        "High-quality, scalable code",
+        "Timely delivery commitments",
+        "Access to diverse skill sets"
       ],
-      title: "Senior Architecture Guidance",
-      description: "15+ years of experience ensuring your systems are built for scale and performance."
+      title: "Software Development",
+      description: "Based on your requirements, we build your software according to the given architecture, providing end-to-end delivery. Our developers assess design documents and carry out development with precision and quality."
     },
   ];
 
@@ -46,7 +55,7 @@ const HowWeWorkSection = () => {
           </div>
 
           {/* Optimized Services Grid */}
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8">
             {services.map((service, index) => (
               <div key={index} className="group">
                 <Card className={`bg-white p-8 rounded-[12px] text-left transition-all duration-300 border border-[#e2e8f0] shadow-[0_2px_8px_rgba(46,42,59,0.1)] text-[#2e2a3b] hover:shadow-[0_8px_24px_rgba(46,42,59,0.15)] transition-all duration-300`}>
@@ -61,11 +70,10 @@ const HowWeWorkSection = () => {
 
                   <CardContent className="pt-0">
                     <p className='text-[#2e2a3b] opacity-80 mb-6 leading-[1.6]'>We help you review your architecture and design to provide critical inputs, considering all functional and non-functional requirements. From technology stack decisions to implementation tools, we guide you through every technical decision.</p>
-                        <ul className="list-disc pl-6 marker:text-[#a9524b]  opacity-90 text-[0.95rem]">
-                            <li className='mb-2'>Optimize existing systems</li>
-                            <li className='mb-2'>Validate technical ideas</li>
-                            <li className='mb-2'>Choose the right technology stack</li>
-                            <li className='mb-2'>Prevent costly architectural mistakes</li>
+                        <ul className="list-disc pl-6 marker:text-[#a9524b] opacity-90 text-[0.95rem]">
+                          {service.listItems.map((item, i) => (
+                            <li key={i} className="mb-2">{item}</li>
+                          ))}
                         </ul>
                   </CardContent>
                 </Card>

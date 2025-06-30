@@ -61,7 +61,7 @@ const AboutUs = () => {
           </div>
 
 
-          <div className="grid grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8 mb-16">
             {stats.map((item, index) => (
               <div
                 key={index}
