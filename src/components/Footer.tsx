@@ -21,7 +21,7 @@ const Footer = () => {
 
                     {/* Show on screens < md (mobile) */}
                     <img
-                      src="/icons/tab-logo-or.svg"
+                      src="/icons/tab-logo-wh.svg"
                       alt="DubliW Tab Logo"
                       className="block md:hidden"
                     />
