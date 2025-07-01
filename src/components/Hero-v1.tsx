@@ -32,21 +32,14 @@ const HeroV1 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            {/* Badge */}
-            {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
-              Next-Gen Software Solutions
-            </div> */}
-
-            {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight leading-relaxed">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight leading-relaxed mt-20 sm:mt-48">
                 <span className="bg-[#2e2a3b] to-white bg-clip-text text-transparent">
                   Trusted Software Outsourcing Partner for Growing Businesses
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-[#2e2a3b] leading-relaxed">
-                We help startups and SMEs build scalable web applications, robust backend systems, and market-ready MVPs with 15+ years of architectural expertise.
+                We help startups and SMEs build scalable web applications, mobile apps and market-ready MVPs with 15+ years of architectural expertise.
               </p>
             </div>
 

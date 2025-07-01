@@ -1,21 +1,21 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Code, Settings, MessageCircle, Database, Sparkles, ArrowRight, Rocket, DollarSign, Hammer } from 'lucide-react';
+import { Code, Settings, MessageCircle, Database, Sparkles, ArrowRight, Rocket, DollarSign, Hammer, CircleDollarSign, Landmark } from 'lucide-react';
 
 const WhyChooseSection = () => {
   const services = [
     {
-      icon: <Rocket size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
+      icon: <Rocket size={48} strokeWidth={0.5} className='text-white'/>,
       title: "Rapid MVP Delivery",
       description: "Get your product to market fast with our streamlined development process and proven methodologies."
     },
     {
-      icon: <DollarSign  size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
+      icon: <Landmark  size={48} strokeWidth={0.5}  className='text-white'/>,
       title: "Budget-Friendly Pricing",
       description: "Competitive rate based on your budget without compromising on quality or expertise."
     },
     {
-      icon: <Hammer  size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
+      icon: <Hammer  size={48} strokeWidth={0.5} className='text-white' />,
       title: "Senior Architecture Guidance",
       description: "15+ years of experience ensuring your systems are built for scale and performance."
     },
@@ -47,7 +47,7 @@ const WhyChooseSection = () => {
                   <CardHeader className="pb-4">
                     <div className="text-center">
                       {/* Icon on top with exact styling */}
-                      <div className="w-[60px] h-[60px] bg-[rgba(169,82,75,0.1)] rounded-[12px] flex items-center justify-center mx-auto mb-6 text-[1.5rem]">
+                      <div className="w-[60px] h-[60px] bg-[#a9524b] rounded-[12px] flex items-center justify-center mx-auto mb-6 text-[1.5rem]">
                         {service.icon}
                       </div>
 

@@ -1,4 +1,4 @@
-import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck, Workflow } from 'lucide-react';
+import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck, Workflow, LockKeyhole, Combine } from 'lucide-react';
 import TechStackCarousel from './TechStackCarousel';
 import TechStack from './TechStack';
 
@@ -57,11 +57,11 @@ const TechnicalCapabilitiesSection = () => {
       category: "Mobile",
       icon: <Smartphone className="w-6 h-6" />,
       technologies: [
-        { name: "Android", imageUrl: "/icons/android.svg" },
+        { name: "Android/Kotlin", imageUrl: "/icons/android.svg" },
         { name: "Flutter", imageUrl: "/icons/flutter.svg" },
         { name: "React Native", imageUrl: "/icons/react.svg" },
-        { name: "Swift", imageUrl: "/icons/apple.svg" },
-        { name: "Kotlin", imageUrl: "/icons/apple.svg" }
+        { name: "iOS/Swift", imageUrl: "/icons/apple.svg" },
+        // { name: "Kotlin", imageUrl: "/icons/apple.svg" }
       ],
       color: "from-emerald-500 to-green-500",
       bgColor: "bg-emerald-500/10",
@@ -105,6 +105,7 @@ const TechnicalCapabilitiesSection = () => {
         { name: "GitLab", imageUrl: "/icons/mongodb.svg" },
         { name: "SonarQube", imageUrl: "/icons/mongodb.svg" },
         { name: "Snyk", imageUrl: "/icons/mongodb.svg" },
+        { name: "Docker", imageUrl: "/icons/mongodb.svg" },
 
       ],
       color: "from-cyan-500 to-blue-500",
@@ -130,22 +131,28 @@ const TechnicalCapabilitiesSection = () => {
 
             <div className="flex flex-col items-center gap-8 mb-16 md:flex-row md:justify-between">
               <div className="flex-1 text-center opacity-100 transition-opacity transition-transform duration-600 ease-in-out">
-                <div className="w-[80px] h-[80px] bg-[#3e3f56] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#a9524b] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110"><Cloud size={48} strokeWidth={0.75} fill='#a9524b' /> </div>
+                <div className="w-[80px] h-[80px] bg-[#a9524b] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#f1f5f9] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110"><Cloud size={48} strokeWidth={1} className='text-white'/> </div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>Cloud-based Applications</h3>
                 <p className='text-[#f1f5f9] opacity-80 leading-[1.6] text-[0.9rem]'>Delivering cost-effective and scalable solutions on leading cloud platforms including AWS, Azure, and Google Cloud Platform.</p>
               </div>
               <div className="flex-1 text-center opacity-100 transition-opacity transition-transform duration-600 ease-in-out">
-                <div className="w-[80px] h-[80px] bg-[#3e3f56] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#a9524b] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110">🏗️</div>
+                <div className="w-[80px] h-[80px] bg-[#a9524b] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#f1f5f9] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110">
+                  <img
+                      src="/icons/build_to_scale.svg"
+                      alt="build to scale.svg"
+                      className=""
+                    />
+                </div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>Scalable Software Platforms</h3>
                 <p className='text-[#f1f5f9] opacity-80 leading-[1.6] text-[0.9rem]'>Utilizing microservices architecture for robust and future-proof systems that grow with your business.</p>
               </div>
               <div className="flex-1 text-center opacity-100 transition-opacity transition-transform duration-600 ease-in-out">
-                <div className="w-[80px] h-[80px] bg-[#3e3f56] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#a9524b] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110">📊</div>
+                <div className="w-[80px] h-[80px] bg-[#a9524b] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#f1f5f9] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110"><Combine size={48} strokeWidth={1} className='text-white'/></div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>High-Volume Data Pipelines</h3>
                 <p className='text-[#f1f5f9] opacity-80 leading-[1.6] text-[0.9rem]'>Building efficient data pipelines to handle massive amounts of data for analytics and processing requirements.</p>
               </div>
               <div className="flex-1 text-center opacity-100 transition-opacity transition-transform duration-600 ease-in-out">
-                <div className="w-[80px] h-[80px] bg-[#3e3f56] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#a9524b] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110">🔒</div>
+                <div className="w-[80px] h-[80px] bg-[#a9524b] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#f1f5f9] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110"><LockKeyhole size={48} strokeWidth={1} className='text-white'/></div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>Advanced Security</h3>
                 <p className='text-[#f1f5f9] opacity-80 leading-[1.6] text-[0.9rem]'>Implementing data and platform security with a zero-trust architecture approach for maximum protection.</p>
               </div>

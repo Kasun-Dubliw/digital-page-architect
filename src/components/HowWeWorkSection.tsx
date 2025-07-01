@@ -32,7 +32,7 @@ const HowWeWorkSection = () => {
         "Access to diverse skill sets"
       ],
       title: "Software Development",
-      description: "Based on your requirements, we build your software according to the given architecture, providing end-to-end delivery. Our developers assess design documents and carry out development with precision and quality."
+      description: "Based on your requirements, we build your software according to the designed architecture, providing end-to-end delivery. Our developers assess design documents and carry out development with precision and quality."
     },
   ];
 
@@ -69,7 +69,7 @@ const HowWeWorkSection = () => {
                   </CardHeader>
 
                   <CardContent className="pt-0">
-                    <p className='text-[#2e2a3b] opacity-80 mb-6 leading-[1.6]'>We help you review your architecture and design to provide critical inputs, considering all functional and non-functional requirements. From technology stack decisions to implementation tools, we guide you through every technical decision.</p>
+                    <p className='text-[#2e2a3b] opacity-80 mb-6 leading-[1.6]'>{service.description}</p>
                         <ul className="list-disc pl-6 marker:text-[#a9524b] opacity-90 text-[0.95rem]">
                           {service.listItems.map((item, i) => (
                             <li key={i} className="mb-2">{item}</li>

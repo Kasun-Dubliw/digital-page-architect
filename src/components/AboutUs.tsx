@@ -33,7 +33,11 @@ const AboutUs = () => {
       title: "Building Something That Won't Scale",
       problemValue: "💸",
       problemLabel: "Costly Rebuilds",
-      solutionValue: <SquareCheck fill="green" size={48} />,
+      solutionValue: <img
+                      src="/icons/build_to_scale_gr.svg"
+                      alt="build to scale.svg"
+                      className=""
+                    />,
       solutionLabel: "Built to Scale",
       description:
         "Don't waste months rebuilding when you grow. Our architects design for your future, not just today.",
