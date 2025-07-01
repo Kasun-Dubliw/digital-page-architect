@@ -14,7 +14,7 @@ const Footer = () => {
                   <>
                     {/* Show on screens >= md (tablet and up) */}
                     <img
-                      src="/icons/logo-wh.svg"
+                      src="/icons/dubli_with_logo_2x_light_text_1.svg"
                       alt="DubliW Logo"
                       className="hidden md:block"
                     />
