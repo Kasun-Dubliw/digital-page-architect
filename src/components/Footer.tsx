@@ -86,10 +86,10 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 {[
-                  { name: "MVP Development", href: "#home" },
-                  { name: "Software Development", href: "#about" },
-                  { name: "System Architecture", href: "#services" },
-                  { name: "Strategic Consultation", href: "#portfolio" }
+                  { name: "MVP Development", href: "#howWeWorkSection" },
+                  { name: "Software Development", href: "#howWeWorkSection" },
+                  { name: "System Architecture", href: "#howWeWorkSection" },
+                  { name: "Strategic Consultation", href: "#howWeWorkSection" }
                 ].map((link, index) => (
                   <li key={index}>
                     <a
@@ -110,18 +110,12 @@ const Footer = () => {
               <h4 className="text-[1.1rem] font-semibold mb-4 text-[#a9524b]">
                 Technologies
               </h4>
-
-
-
-
-
-
               <ul className="list-none space-y-3">
                 {[
-                  { name: "React & Node.js", href: "#home" },
-                  { name: "Python & Java", href: "#about" },
-                  { name: "Cloud Solutions", href: "#services" },
-                  { name: "Mobile Development", href: "#portfolio" }
+                  { name: "React & Node.js", href: "#technicalCapabilitiesSection" },
+                  { name: "Python & Java", href: "#technicalCapabilitiesSection" },
+                  { name: "Cloud Solutions", href: "#technicalCapabilitiesSection" },
+                  { name: "Mobile Development", href: "#technicalCapabilitiesSection" }
                 ].map((link, index) => (
                   <li key={index}>
                     <a
