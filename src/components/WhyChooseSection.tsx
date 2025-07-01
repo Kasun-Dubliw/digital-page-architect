@@ -5,17 +5,17 @@ import { Code, Settings, MessageCircle, Database, Sparkles, ArrowRight, Rocket, 
 const WhyChooseSection = () => {
   const services = [
     {
-      icon: <Rocket size={48} strokeWidth={0.5} className='text-white'/>,
+      icon: <Rocket size={48} strokeWidth={1.5} className='text-white'/>,
       title: "Rapid MVP Delivery",
       description: "Get your product to market fast with our streamlined development process and proven methodologies."
     },
     {
-      icon: <Landmark  size={48} strokeWidth={0.5}  className='text-white'/>,
+      icon: <Landmark  size={48} strokeWidth={1.5}  className='text-white'/>,
       title: "Budget-Friendly Pricing",
       description: "Competitive rate based on your budget without compromising on quality or expertise."
     },
     {
-      icon: <Hammer  size={48} strokeWidth={0.5} className='text-white' />,
+      icon: <Hammer  size={48} strokeWidth={1.5} className='text-white' />,
       title: "Senior Architecture Guidance",
       description: "15+ years of experience ensuring your systems are built for scale and performance."
     },

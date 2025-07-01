@@ -58,24 +58,19 @@ const HowWeWorkSection = () => {
           <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8">
             {services.map((service, index) => (
               <div key={index} className="group">
-                <Card className={`bg-white p-8 rounded-[12px] text-left transition-all duration-300 border border-[#e2e8f0] shadow-[0_2px_8px_rgba(46,42,59,0.1)] text-[#2e2a3b] hover:shadow-[0_8px_24px_rgba(46,42,59,0.15)] transition-all duration-300`}>
-                  <CardHeader className="pb-4">
-                    <div className="text-left mb-4">
-                      {/* Title below icon */}
-                      <CardTitle className="text-[1.4rem] font-semibold mb-4 text-[#a9524b]">
-                        {service.title}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
+                <Card className={`bg-white h-full pb-20 pl-10 pt-8 pr-10 rounded-[12px] text-left transition-all duration-300 border border-[#e2e8f0] shadow-[0_2px_8px_rgba(46,42,59,0.1)] text-[#2e2a3b] hover:shadow-[0_8px_24px_rgba(46,42,59,0.15)] transition-all duration-300`}>
+                  <div className="text-left mb-4 text-[1.4rem] font-semibold text-[#a9524b]">
+                    {service.title}
+                  </div>
+                  <div>
+                    <p className="text-[#2e2a3b] opacity-80 mb-6 leading-[1.6]">{service.description}</p>
+                    <ul className="list-disc marker:text-[#a9524b] opacity-90 text-[0.95rem] pl-4">
+                      {service.listItems.map((item, i) => (
+                        <li key={i} className="mb-2">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
 
-                  <CardContent className="pt-0">
-                    <p className='text-[#2e2a3b] opacity-80 mb-6 leading-[1.6]'>{service.description}</p>
-                        <ul className="list-disc pl-6 marker:text-[#a9524b] opacity-90 text-[0.95rem]">
-                          {service.listItems.map((item, i) => (
-                            <li key={i} className="mb-2">{item}</li>
-                          ))}
-                        </ul>
-                  </CardContent>
                 </Card>
               </div>
             ))}
