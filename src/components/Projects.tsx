@@ -40,7 +40,7 @@ const Projects = () => {
             </h2>
 
             <p className="text-lg text-[#f1f5f9] leading-relaxed max-w-2xl mx-auto opacity-70 text-[1.1rem]">
-              AProven results across industries - see our client successes
+              Proven results across industries - see our client successes
             </p>
 
           </div>
@@ -180,7 +180,7 @@ const Projects = () => {
           <div className="flex justify-center mt-12">
             <button onClick={() => scrollToSection('journeySection')} className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
               <span className="flex items-center justify-center gap-2">
-                View All Projects & Schedule Consultation
+                Schedule Free Consultation
               </span>
             </button>
           </div>

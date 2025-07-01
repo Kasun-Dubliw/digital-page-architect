@@ -80,7 +80,7 @@ const AboutUs = () => {
                 </h3>
 
                 <div className="flex flex-col items-center text-center">
-                  <span className="text-[2.5rem] font-bold mb-2 block text-[#dc2626]">
+                  <span className="text-[2.5rem] font-bold mb-2 block text-[#a9524b]">
                     {item.problemValue}
                   </span>
                   <div className="text-base font-semibold mb-3 text-[#f1f5f9]">{item.problemLabel}</div>

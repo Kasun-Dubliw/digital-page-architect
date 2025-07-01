@@ -105,7 +105,7 @@
   padding: 2rem 1.5rem;
   position: relative;
   border-left: 6px solid transparent;
-  background: linear-gradient(#3e3f56, #3e3f56) padding-box, linear-gradient(180deg, #dc2626 0%, #dc2626 45%, #a9524b 50%, #22c55e 55%, #22c55e 100%) border-box;
+  background: linear-gradient(#3e3f56, #3e3f56) padding-box, linear-gradient(180deg, #a9524b 0%, #a9524b 45%, #a9524b 50%, #22c55e 55%, #22c55e 100%) border-box;
 }
 
 .section-subtitle {

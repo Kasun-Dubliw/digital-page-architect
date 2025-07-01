@@ -112,10 +112,12 @@ const Footer = () => {
               </h4>
               <ul className="list-none space-y-3">
                 {[
-                  { name: "React & Node.js", href: "#technicalCapabilitiesSection" },
-                  { name: "Python & Java", href: "#technicalCapabilitiesSection" },
-                  { name: "Cloud Solutions", href: "#technicalCapabilitiesSection" },
-                  { name: "Mobile Development", href: "#technicalCapabilitiesSection" }
+                  { name: "Backend", href: "#technicalCapabilitiesSection" },
+                  { name: "Frontend", href: "#technicalCapabilitiesSection" },
+                  { name: "Cloud & DevOps", href: "#technicalCapabilitiesSection" },
+                  { name: "Mobile", href: "#technicalCapabilitiesSection" },
+                  { name: "Data Engineering", href: "#technicalCapabilitiesSection" },
+                  { name: "DevSecOps", href: "#technicalCapabilitiesSection" }
                 ].map((link, index) => (
                   <li key={index}>
                     <a
