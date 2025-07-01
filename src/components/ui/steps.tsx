@@ -5,7 +5,7 @@ const steps = [
     id: 1,
     title: "Initial Discovery Call",
     highlight: "(You Are Here!)",
-    icon: "💬",
+    icon: <img src="/icons/clear_vision_alignment.svg" alt="Step 1 Icon" className="w-8 h-8" />,
     outcomeTitle: "Clear Vision Alignment",
     timeframe: "FREE 30-60 min session",
     description:
@@ -15,7 +15,7 @@ const steps = [
   {
     id: 2,
     title: "Detailed Requirements & Solution Brainstorm",
-    icon: "🎯",
+    icon: <img src="/icons/custom_solution_blueprint_v2.svg" alt="Step 1 Icon" className="w-8 h-8" />,
     outcomeTitle: "Custom Solution Blueprint",
     timeframe: "Architect-designed roadmap",
     description:
@@ -25,7 +25,7 @@ const steps = [
   {
     id: 3,
     title: "Proposal & Technical Roadmap",
-    icon: "📋",
+    icon: <img src="/icons/detailed_project_plan.svg" alt="Step 1 Icon" className="w-8 h-8" />,
     outcomeTitle: "Detailed Project Plan",
     timeframe: "Fixed scope & transparent pricing",
     description:
@@ -35,7 +35,7 @@ const steps = [
   {
     id: 4,
     title: "Project Kick-off & Agile Development",
-    icon: "🚀",
+    icon: <img src="/icons/working_mvp.svg" alt="Step 1 Icon" className="w-8 h-8" />,
     outcomeTitle: "Working MVP",
     timeframe: "Launch-ready in 8-12 weeks",
     description:
@@ -45,7 +45,7 @@ const steps = [
   {
     id: 5,
     title: "Handover or Maintenance",
-    icon: "✅",
+    icon: <img src="/icons/full_ownership.svg" alt="Step 1 Icon" className="w-8 h-8" />,
     outcomeTitle: "Full Ownership",
     timeframe: "Complete codebase & docs",
     description:
@@ -81,7 +81,7 @@ function Step({ step, isExpanded, toggle }) {
       >
         {step.id}
       </div>
-      <div className="text-[1.5rem] my-[0.8rem] mb-[0.5rem] block">{step.icon}</div>
+      <div className="text-[1.5rem] my-[0.8rem] mb-[0.5rem] block flex items-center justify-center">{step.icon}</div>
       <div className="text-[1rem] font-semibold text-[#2e2a3b] mb-[0.3rem] leading-[1.2]">
         {step.outcomeTitle}
       </div>

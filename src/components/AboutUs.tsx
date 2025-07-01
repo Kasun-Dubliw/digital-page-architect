@@ -35,7 +35,7 @@ const AboutUs = () => {
     },
     {
       title: "Building Something That Won't Scale",
-      problemValue: "💸",
+      problemValue: <img src="/icons/dollar-sign.svg" alt="Step 1 Icon" className="w-8 h-8" />,
       problemLabel: "Costly Rebuilds",
       solutionValue: <img
         src="/icons/build_to_scale_gr.svg"
