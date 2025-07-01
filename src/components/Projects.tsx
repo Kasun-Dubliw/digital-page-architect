@@ -41,32 +41,133 @@ const Projects = () => {
 
           {/* Optimized Projects Grid */}
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
-            {Projects.map((project, index) => (
-              <div key={index} className="group">
-                <Card className={`bg-[#3e3f56] p-8 rounded-[12px] transition-all duration-300 shadow-[0_2px_8px_rgba(46,42,59,0.1)] text-[#2e2a3b] hover:-translate-y-2 border border-[#2e2a3b] hover:border-[#a9524b] hover:shadow-[0_8px_24px_rgba(46,42,59,0.15)] transition-all duration-300`}>
-                  <CardHeader className="pb-4">
-                    <div className="text-center">
-                      {/* Icon on top with exact styling */}
-                      <div className="w-[60px] h-[60px] bg-[rgba(169,82,75,0.1)] rounded-[12px] flex items-center justify-center mx-auto mb-6 text-[1.5rem]">
-                        {project.icon}
-                      </div>
-
-                      {/* Title below icon */}
-                      <CardTitle className="text-lg font-semibold text-[#f1f5f9] group-hover:text-[#515167] transition-colors">
-                        {project.title}
-                      </CardTitle>
+            <div className="projects-compact-logo">
+                    <div className="project-compact-card fade-in">
+                        <div className="compact-header">
+                            <div className="client-logo-compact">
+                                <div className="logo-compact-placeholder">CLIENT<br />LOGO</div>
+                            </div>
+                            <div className="compact-content">
+                                <h3 className="project-title-compact">US Healthcare Startup Platform</h3>
+                                <div className="project-meta-compact">Healthcare MVP • Series A Success</div>
+                                <div className="video-section">
+                                    <a href="https://your-app-demo.com" target="_blank" className="video-indicator">📹 Watch Demo</a>
+                                    {/* <a href="#" onClick="openProjectDialog('healthcare')" class="video-indicator">📄 Full Story</a> */}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="project-summary-compact">
+                            HIPAA-compliant healthcare platform delivered in 8 weeks, helping client secure $2M Series A funding with 10,000+ active users.
+                        </div>
+                        
+                        <div className="key-metrics-compact">
+                            <div className="compact-metric">
+                                <div className="compact-value">8 wks</div>
+                                <div className="compact-label">Launch</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">$2M</div>
+                                <div className="compact-label">Funding</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">10K+</div>
+                                <div className="compact-label">Users</div>
+                            </div>
+                        </div>
+                        
+                        <div className="tech-tags-compact">
+                            <span className="tech-tag-compact">React</span>
+                            <span className="tech-tag-compact">Node.js</span>
+                            <span className="tech-tag-compact">AWS</span>
+                            <span className="tech-tag-compact">HIPAA</span>
+                        </div>
                     </div>
 
-                  </CardHeader>
+                    <div className="project-compact-card fade-in">
+                        <div className="compact-header">
+                            <div className="client-logo-compact">
+                                <div className="logo-compact-placeholder">CLIENT<br />LOGO</div>
+                            </div>
+                            <div className="compact-content">
+                                <h3 className="project-title-compact">New Zealand Learning System</h3>
+                                <div className="project-meta-compact">Education Platform • Enterprise Scale</div>
+                                <div className="video-section">
+                                    <a href="https://your-lms-platform.com" target="_blank" className="video-indicator">📹 Platform Tour</a>
+                                    {/* <a href="#" onClick="openProjectDialog('education')" class="video-indicator">📄 Read More</a> */}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="project-summary-compact">
+                            Enterprise LMS serving 50,000+ daily users with 99.9% uptime. Built with microservices architecture for scalability.
+                        </div>
+                        
+                        <div className="key-metrics-compact">
+                            <div className="compact-metric">
+                                <div className="compact-value">50K+</div>
+                                <div className="compact-label">Daily Users</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">99.9%</div>
+                                <div className="compact-label">Uptime</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">6 mos</div>
+                                <div className="compact-label">Built</div>
+                            </div>
+                        </div>
+                        
+                        <div className="tech-tags-compact">
+                            <span className="tech-tag-compact">Angular</span>
+                            <span className="tech-tag-compact">Java</span>
+                            <span className="tech-tag-compact">PostgreSQL</span>
+                            <span className="tech-tag-compact">K8s</span>
+                        </div>
+                    </div>
 
-                  <CardContent className="pt-0">
-                    <CardDescription className="text-[#f1f5f9] leading-relaxed transition-colors mb-4">
-                      {project.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
+                    <div className="project-compact-card fade-in">
+                        <div className="compact-header">
+                            <div className="client-logo-compact">
+                                <div className="logo-compact-placeholder">CLIENT<br />LOGO</div>
+                            </div>
+                            <div className="compact-content">
+                                <h3 className="project-title-compact">Personal Finance Mobile App</h3>
+                                <div className="project-meta-compact">Fintech Mobile • AI-Powered</div>
+                                <div className="video-section">
+                                    <a href="https://your-app-store-link.com" target="_blank" className="video-indicator">📹 App Demo</a>
+                                    {/* <a href="#" onClick="openProjectDialog('fintech')" class="video-indicator">📄 Read More</a> */}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="project-summary-compact">
+                            Cross-platform mobile app with AI insights achieving 25K+ downloads and 4.8-star rating on app stores.
+                        </div>
+                        
+                        <div className="key-metrics-compact">
+                            <div className="compact-metric">
+                                <div className="compact-value">25K+</div>
+                                <div className="compact-label">Downloads</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">4.8★</div>
+                                <div className="compact-label">Rating</div>
+                            </div>
+                            <div className="compact-metric">
+                                <div className="compact-value">12 wks</div>
+                                <div className="compact-label">Built</div>
+                            </div>
+                        </div>
+                        
+                        <div className="tech-tags-compact">
+                            <span className="tech-tag-compact">React Native</span>
+                            <span className="tech-tag-compact">Python</span>
+                            <span className="tech-tag-compact">Firebase</span>
+                            <span className="tech-tag-compact">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
           </div>
           <div className="flex justify-center mt-12">
             <button className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
