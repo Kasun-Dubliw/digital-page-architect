@@ -1,28 +1,34 @@
 
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Code, Settings, MessageCircle, Database, Sparkles, ArrowRight, Rocket, DollarSign, Hammer } from 'lucide-react';
+import ProjectDialog from './ui/ProjectDialog';
 
 const Projects = () => {
-  const Projects = [
-    {
-      icon: <Rocket size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-      title: "project 01",
-      description: "ongoing"
-    },
-    // {
-    //   icon: <DollarSign size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-    //   title: "Budget-Friendly Pricing",
-    //   description: "Competitive rate based on your budget without compromising on quality or expertise."
-    // },
-    // {
-    //   icon: <Hammer size={48} strokeWidth={2.25} absoluteStrokeWidth fill='#a9524b' />,
-    //   title: "Senior Architecture Guidance",
-    //   description: "15+ years of experience ensuring your systems are built for scale and performance."
-    // },
-  ];
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openDialog = (type) => {
+    setSelectedProject(type);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeDialog = () => {
+    setSelectedProject(null);
+    document.body.style.overflow = 'auto';
+  };
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
-    <section id="WhyChooseSection" className="relative py-24 overflow-hidden">
+    <section id="projects" className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[#2e2a3b]"></div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -52,7 +58,7 @@ const Projects = () => {
                                 <div className="project-meta-compact">Healthcare MVP • Series A Success</div>
                                 <div className="video-section">
                                     <a href="https://your-app-demo.com" target="_blank" className="video-indicator">📹 Watch Demo</a>
-                                    {/* <a href="#" onClick="openProjectDialog('healthcare')" class="video-indicator">📄 Full Story</a> */}
+                                    <a onClick={() => openDialog('healthcare')} className="video-indicator">📄 Full Story</a>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +100,8 @@ const Projects = () => {
                                 <div className="project-meta-compact">Education Platform • Enterprise Scale</div>
                                 <div className="video-section">
                                     <a href="https://your-lms-platform.com" target="_blank" className="video-indicator">📹 Platform Tour</a>
-                                    {/* <a href="#" onClick="openProjectDialog('education')" class="video-indicator">📄 Read More</a> */}
+                                    <a onClick={() => openDialog('education')} className="video-indicator">📄 Read More</a>
+
                                 </div>
                             </div>
                         </div>
@@ -136,7 +143,8 @@ const Projects = () => {
                                 <div className="project-meta-compact">Fintech Mobile • AI-Powered</div>
                                 <div className="video-section">
                                     <a href="https://your-app-store-link.com" target="_blank" className="video-indicator">📹 App Demo</a>
-                                    {/* <a href="#" onClick="openProjectDialog('fintech')" class="video-indicator">📄 Read More</a> */}
+                                    <a onClick={() => openDialog('fintech')} className="video-indicator">📄 Read More</a>
+
                                 </div>
                             </div>
                         </div>
@@ -170,7 +178,7 @@ const Projects = () => {
                 </div>
           </div>
           <div className="flex justify-center mt-12">
-            <button className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
+            <button onClick={() => scrollToSection('journeySection')} className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
               <span className="flex items-center justify-center gap-2">
                 View All Projects & Schedule Consultation
               </span>
@@ -179,6 +187,7 @@ const Projects = () => {
 
         </div>
       </div>
+      {selectedProject && <ProjectDialog projectType={selectedProject} onClose={closeDialog} />}
     </section>
   );
 };

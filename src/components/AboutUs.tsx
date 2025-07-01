@@ -1,15 +1,19 @@
 import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck } from 'lucide-react';
 import TechStackCarousel from './TechStackCarousel';
 import TechStack from './TechStack';
+import { useState } from 'react';
 
 const AboutUs = () => {
-  const expertise = [
-    "Cloud-based applications with cost-effectiveness in mind",
-    "Scalable software platforms utilizing microservices architecture",
-    "Data pipelines to handle massive ammounts of data",
-    "Data security and platform security with zero-trust architecture"
-  ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
   const stats = [
     {
       title: "Missing Your Launch Window",
@@ -34,10 +38,10 @@ const AboutUs = () => {
       problemValue: "💸",
       problemLabel: "Costly Rebuilds",
       solutionValue: <img
-                      src="/icons/build_to_scale_gr.svg"
-                      alt="build to scale.svg"
-                      className=""
-                    />,
+        src="/icons/build_to_scale_gr.svg"
+        alt="build to scale.svg"
+        className=""
+      />,
       solutionLabel: "Built to Scale",
       description:
         "Don't waste months rebuilding when you grow. Our architects design for your future, not just today.",
@@ -109,13 +113,13 @@ const AboutUs = () => {
 
 
               <div className="inline-flex flex-col sm:flex-row gap-4">
-                <button className="group relative px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 bg-[#a9524b] text-[#f1f5f9] font-medium rounded-lg hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
+                <button onClick={() => scrollToSection('journeySection')} className="group relative px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 bg-[#a9524b] text-[#f1f5f9] font-medium rounded-lg hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
                   <span className="flex items-center justify-center gap-2">
                     Fix My Development Problems
                   </span>
                 </button>
 
-                <button className="group px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 text-[#f1f5f9] font-medium rounded-lg border border border-[#f1f5f9]/10 hover:border-[#a9524b] hover:text-[#a9524b] hover:-translate-y-0.5 transition duration-300">
+                <button onClick={() => scrollToSection('howWeWorkSection')} className="group px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 text-[#f1f5f9] font-medium rounded-lg border border border-[#f1f5f9]/10 hover:border-[#a9524b] hover:text-[#a9524b] hover:-translate-y-0.5 transition duration-300">
                   See How We Do It
                 </button>
               </div>

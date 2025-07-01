@@ -2,43 +2,22 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Code, Settings, MessageCircle, Database, Sparkles, ArrowRight, Rocket, DollarSign, Hammer } from 'lucide-react';
 import Steps from './ui/steps';
+import { useState } from 'react';
 
 const JourneySection = () => {
-  const services = [
-    {
-      listItems: [
-        "Optimize existing systems",
-        "Validate technical ideas",
-        "Choose the right technology stack",
-        "Prevent costly architectural mistakes"
-      ],
-      title: "Strategic Consultation",
-      description: "We help you review your architecture and design to provide critical inputs, considering all functional and non-functional requirements. From technology stack decisions to implementation tools, we guide you through every technical decision."
-    },
-    {
-      listItems: [
-        "Solid foundation for development",
-        "Clear technical roadmap",
-        "Reduced technical debt",
-        "Comprehensive solution documentation"
-      ],
-      title: "System Architecture",
-      description: "Upon understanding your business requirements, we design the entire system architecture, including tech stack and necessary tools. We brief your tech leads and developers, ensuring they understand our designs with follow-up sessions."
-    },
-    {
-      listItems: [
-        "Full-cycle development",
-        "High-quality, scalable code",
-        "Timely delivery commitments",
-        "Access to diverse skill sets"
-      ],
-      title: "Software Development",
-      description: "Based on your requirements, we build your software according to the given architecture, providing end-to-end delivery. Our developers assess design documents and carry out development with precision and quality."
-    },
-  ];
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
-    <section id="WhyChooseSection" className="relative py-24 overflow-hidden">
+    <section id="journeySection" className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[#f1f5f9]"></div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -80,7 +59,7 @@ const JourneySection = () => {
                       </span>
                     </button>
 
-                    <button className="group px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 text-[#2e2a3b] font-medium rounded-lg border border border-[#2e2a3b] hover:border-[#a9524b] hover:text-[#a9524b] hover:-translate-y-0.5 transition duration-300">
+                    <button onClick={() => scrollToSection('howWeWorkSection')} className="group px-10 py-4 rounded-[6px] font-medium mr-4 mb-4 text-[#2e2a3b] font-medium rounded-lg border border border-[#2e2a3b] hover:border-[#a9524b] hover:text-[#a9524b] hover:-translate-y-0.5 transition duration-300">
                       Learn More About Our Services
                     </button>
                   </div>

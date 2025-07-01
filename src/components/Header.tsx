@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone, Zap, Sparkles } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,21 +35,6 @@ const Header = () => {
             />
           </>
 
-          {/* <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-              <span className="text-xl font-bold text-white">W</span>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white">
-                Dubli<span className="text-cyan-400">W</span>
-              </h3>
-              <div className="flex items-center gap-2 mt-1">
-                <Sparkles className="w-3 h-3 text-cyan-400" />
-                <span className="text-white/60 text-xs">Next-Gen Solutions</span>
-              </div>
-            </div>
-          </div> */}
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <button
@@ -61,7 +46,7 @@ const Header = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('howWeWorkSection')}
               className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Services
@@ -69,7 +54,7 @@ const Header = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('technicalCapabilitiesSection')}
               className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Expertise
@@ -77,7 +62,7 @@ const Header = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('projects')}
               className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Projects
@@ -85,7 +70,7 @@ const Header = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('journeySection')}
               className="relative group text-[#2e2a3b] hover:text-[#a9524b] font-normal text-[0.95rem] transition-colors duration-300"
             >
               Contact
@@ -124,25 +109,25 @@ const Header = () => {
               </button>
 
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('howWeWorkSection')}
                className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Services
               </button>
               <button
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('technicalCapabilitiesSection')}
                className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Expertise
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection('projects')}
                className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Projects
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('journeySection')}
                className="text-[#2e2a3b] hover:text-[#a9524b] hover:bg-[#a9524b]/100 transition-all duration-300 text-left font-medium py-3 px-4 rounded-lg backdrop-blur-md border border-white/10"
               >
                 Contact Us

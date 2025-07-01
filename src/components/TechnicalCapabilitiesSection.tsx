@@ -1,14 +1,17 @@
-import { Check, Code, Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck, Workflow, LockKeyhole, Combine } from 'lucide-react';
-import TechStackCarousel from './TechStackCarousel';
-import TechStack from './TechStack';
+import { Cloud, Smartphone, Database, Monitor, Server, Globe, Shield, Zap, Sparkles, Star, SquareCheck, Workflow, LockKeyhole, Combine } from 'lucide-react';
+
+import { useState } from 'react';
 
 const TechnicalCapabilitiesSection = () => {
-  const expertise = [
-    "Cloud-based applications with cost-effectiveness in mind",
-    "Scalable software platforms utilizing microservices architecture",
-    "Data pipelines to handle massive ammounts of data",
-    "Data security and platform security with zero-trust architecture"
-  ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   const techStacks = [
     {
@@ -115,7 +118,7 @@ const TechnicalCapabilitiesSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#2e2a3b] relative overflow-hidden">
+    <section id="technicalCapabilitiesSection" className="py-20 bg-[#2e2a3b] relative overflow-hidden">
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -185,7 +188,7 @@ const TechnicalCapabilitiesSection = () => {
             </div>
 
             <div className="flex justify-center mt-12">
-              <button className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
+              <button onClick={() => scrollToSection('journeySection')} className="px-10 py-4 rounded-[6px] font-medium bg-[#a9524b] text-[#f1f5f9] hover:bg-[#94453e] hover:-translate-y-0.5 transition duration-300">
                 <span className="flex items-center justify-center gap-2">
                   Have a unique tech challenge? Let's discuss how our expertise can help.
                 </span>
