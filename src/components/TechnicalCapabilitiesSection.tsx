@@ -143,7 +143,7 @@ const TechnicalCapabilitiesSection = () => {
                   <img
                       src="/icons/scale-software.svg"
                       alt="build to scale.svg"
-                      className="relative -top-1.5 left-1.5"
+                      className="relative -top-1.5 left-2"
                     />
                 </div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>Scalable Software Platforms</h3>
