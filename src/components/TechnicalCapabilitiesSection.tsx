@@ -141,9 +141,9 @@ const TechnicalCapabilitiesSection = () => {
               <div className="flex-1 text-center opacity-100 transition-opacity transition-transform duration-600 ease-in-out">
                 <div className="w-[80px] h-[80px] bg-[#a9524b] rounded-full flex items-center justify-center mx-auto mb-6 text-[2.5rem] border-[3px] border-[#f1f5f9] transition-transform duration-300 shadow-[0_4px_15px_rgba(169,82,75,0.2)] hover:scale-110">
                   <img
-                      src="/icons/build_to_scale.svg"
+                      src="/icons/scale-software.svg"
                       alt="build to scale.svg"
-                      className=""
+                      className="relative -top-1.5 left-1.5"
                     />
                 </div>
                 <h3 className='text-[1.1rem] font-semibold mb-4 text-[#f1f5f9] leading-[1.3]'>Scalable Software Platforms</h3>

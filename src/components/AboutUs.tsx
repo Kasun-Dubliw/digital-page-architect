@@ -35,12 +35,12 @@ const AboutUs = () => {
     },
     {
       title: "Building Something That Won't Scale",
-      problemValue: <img src="/icons/dollar-sign.svg" alt="Step 1 Icon" className="w-8 h-8" />,
+      problemValue: <img src="/icons/dollar-sign.svg" alt="Step 1 Icon" className="w-16 h-16" />,
       problemLabel: "Costly Rebuilds",
       solutionValue: <img
-        src="/icons/build_to_scale_gr.svg"
+        src="/icons/buid_to_scale.svg"
         alt="build to scale.svg"
-        className=""
+        className="w-24 h-24 mx-auto"
       />,
       solutionLabel: "Built to Scale",
       description:
