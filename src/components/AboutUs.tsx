@@ -60,7 +60,7 @@ const AboutUs = () => {
             </div> */}
 
             <h2 className="text-[2.4rem] font-semibold font-bold mb-6 text-[#f1f5f9]">
-              We Solve Real Development <span className="bg-[#a9524b] bg-clip-text text-transparent">Challenges</span>
+              We Help You Build <span className="bg-[#a9524b] bg-clip-text text-transparent">Faster,</span> <span className="bg-[#a9524b] bg-clip-text text-transparent">Smarter</span> and <span className="bg-[#a9524b] bg-clip-text text-transparent">Cleaner</span>
             </h2>
 
             <p className="text-base text-lg text-[#f1f5f9] leading-relaxed max-w-2xl mx-auto opacity-70 text-[1.1rem] section-subtitle">

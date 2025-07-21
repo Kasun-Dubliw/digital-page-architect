@@ -164,6 +164,7 @@
 
         .compact-header {
             display: flex;
+            flex-direction: column;
             gap: 1.25rem;
             margin-bottom: 1.25rem;
             align-items: flex-start;
@@ -171,14 +172,13 @@
 
         /* Improved Logo Placeholders */
         .client-logo-compact {
-            width: 70px;
-            height: 50px;
-            background: linear-gradient(135deg, rgba(241, 245, 249, 0.95) 0%, rgba(226, 232, 240, 0.95) 100%);
-            border-radius: 8px;
+            height: 80px;
+            /* background: linear-gradient(135deg, rgba(241, 245, 249, 0.95) 0%, rgba(226, 232, 240, 0.95) 100%); */
+            /* border-radius: 8px; */
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid rgba(169, 82, 75, 0.2);
+            /* border: 2px solid rgba(169, 82, 75, 0.2); */
             flex-shrink: 0;
             position: relative;
             overflow: hidden;
