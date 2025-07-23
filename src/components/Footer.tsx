@@ -36,7 +36,7 @@ const Footer = () => {
               <p className="text-[#f1f5f9] opacity-70 no-underline text-[0.9rem] leading-[1.6]">
                 Your Trusted Partner for Innovative IT Solutions and Modern Software Architecture — Designed for a Remote-First World.
               </p>
-              <div className="mt-4 text-[#f1f5f9] text-sm">
+              {/* <div className="mt-4 text-[#f1f5f9] text-sm">
                 <p className="mb-2">Follow us on:</p>
                 <div className="flex items-center gap-4">
                   <a
@@ -48,22 +48,22 @@ const Footer = () => {
                     <Facebook className="w-8 h-8" />
 
                   </a>
-                  {/* <a
+                  <a
                     href="https://www.twitter.com/dubliw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#f1f5f9] hover:text-[#a9524b] transition-colors duration-300"
                   >
                     <Twitter className="w-8 h-8" />
-                  </a> */}
-                  {/* <a
+                  </a>
+                  <a
                     href="https://www.instagram.com/dubliw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#f1f5f9] hover:text-[#a9524b] transition-colors duration-300"
                   >
                     <Instagram className="w-8 h-8" />
-                  </a> */}
+                  </a>
                   <a
                     href="https://www.instagram.com/dubliw"
                     target="_blank"
@@ -74,7 +74,7 @@ const Footer = () => {
                   </a>
                 </div>
 
-              </div>
+              </div> */}
             </div>
           </div>
 
