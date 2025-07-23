@@ -166,9 +166,11 @@ const Footer = () => {
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                     {/* <p className="text-[#f1f5f9] opacity-70 text-[0.9rem] leading-[1.6]">Email:</p> */}
-                    <p className="text-[#f1f5f9] opacity-70 text-[0.9rem] leading-[1.6]">68/3, Sandun Uyana<br />
-                      Hedigama, Piliyandala<br />
-                      Sri Lanka</p>
+                    <p className="text-[#f1f5f9] opacity-70 text-[0.9rem] leading-[1.6]">
+                      Dubliw Pvt Ltd<br />
+                      Piliyandala<br />
+                      Sri Lanka, 10300
+                    </p>
                   </div>
                 </div>
 
@@ -181,7 +183,7 @@ const Footer = () => {
                     <p className="text-[#f1f5f9] opacity-70 text-[0.9rem] leading-[1.6]">Serving: Global clients</p>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
