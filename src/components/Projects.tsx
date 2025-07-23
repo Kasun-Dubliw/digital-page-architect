@@ -57,9 +57,11 @@ const Projects = () => {
                                         <h3 className="project-title-compact">New Zealand Mental Health Platform</h3>
                                         {/* <div className="project-meta-compact">Healthcare mobile • MVP</div> */}
                                         <div className="video-section">
-                                            <a href="https://lighthousehealth.tech/" target="_blank" className="video-indicator">📹 Watch Demo</a>
+                                            {/* <a href="https://static-website-gnome.s3.ap-south-1.amazonaws.com/videos/vecteezy_username-and-password-for-login-information-on-smartphone_25322750.mov" target="_blank" className="video-indicator">📹 Watch Demo</a> */}
+                                            <a onClick={() => openDialog('lighthousehealth-video')} className="video-indicator">📹 Watch Demo</a>
                                             <a onClick={() => openDialog('lighthousehealth')} className="video-indicator">📄 Full Story</a>
                                         </div>
+                                        
                                     </div>
                                 </div>
 
@@ -101,7 +103,7 @@ const Projects = () => {
                                         <h3 className="project-title-compact">US Lead Generation Platform</h3>
                                         {/* <div className="project-meta-compact">US Lead Generation Platform • Enterprise Scale</div> */}
                                         <div className="video-section">
-                                            <a href="https://systemate.com/" target="_blank" className="video-indicator">📹 Platform Tour</a>
+                                            <a href="https://app.systemate.com/" target="_blank" className="video-indicator">📹 Platform Tour</a>
                                             <a onClick={() => openDialog('systemate')} className="video-indicator">📄 Read More</a>
 
                                         </div>
@@ -160,8 +162,7 @@ const Projects = () => {
                                     TeaAI creates AI tools for tea traders to optimize operations through market intelligence, automated grading, price forecasting and quality assessment with zero trust data privacy.
                                 </div>
                                 <div className="project-summary-compact">
-                                    We helped the team to design an improved AWS-based architecture with ETL pipelines for processing large data volumes while maintaining cost-effective security controls. different architectureal patterns were explored to create a data lake and near-realtime data processing
-
+                                    We helped the team to design an improved AWS-based architecture with ETL pipelines for processing large data volumes while maintaining cost-effective security controls. different architectural patterns were explored to create a data lake and near-real-time data processing.
                                 </div>
 
                                 {/* <div className="key-metrics-compact">

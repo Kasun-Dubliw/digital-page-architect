@@ -257,6 +257,7 @@
             font-size: 0.85rem;
             line-height: 1.5;
             margin-bottom: 1.25rem;
+            text-align: justify;
         }
 
         .key-metrics-compact {
@@ -389,6 +390,7 @@
             line-height: 1.7;
             margin-bottom: 2rem;
             font-size: 0.95rem;
+            text-align: justify;
         }
 
         .dialog-metrics {
